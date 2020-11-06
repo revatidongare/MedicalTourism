@@ -18,7 +18,7 @@ body {
 	font-weight: 300;
     color: #666;
     background-color: #ddd;
-	font-size: 16px;
+	font-size: 15px;
     line-height: 1.6em;
 }
 
@@ -174,7 +174,7 @@ p.ultra {
 }
 
 a {
-    color: #666;
+    color: #FFFFFF;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -238,8 +238,8 @@ Top area
     transition: all .4s ease-in-out;
 	width: 100%;
 	color: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .top-area.top-padding {
@@ -1193,16 +1193,16 @@ Testimonial
 
 .company-social .social-facebook a i{background: #3873ae;}
 .company-social .social-twitter a i{background: #62c6f8;}
-.company-social .social-dribble a i{background: #d74980;}
-.company-social .social-deviantart a i{background: #8da356;}
 .company-social .social-google a i {background: #000;}
-.company-social .social-vimeo a i {background: #51a6d3;}
+.company-social .social-instagram a i{background: #d74980;}
+.company-social .social-youtube a i{background: #B22222;}
+
 .company-social .social-facebook a:hover i {background: #4893ce;}
 .company-social .social-twitter a:hover i {background: #82e6ff;}
-.company-social .social-dribble a:hover i {background: #f769a0;}
-.company-social .social-deviantart a:hover i {background: #adc376;}
 .company-social .social-google a:hover i {background: #333;}
-.company-social .social-vimeo a:hover i {background: #71c6f3;}
+.company-social .social-instagram a:hover i{background: #FFC0CB;}
+.company-social .social-youtube a:hover i{background: #CD5C5C;}
+
 
 
 .carousel-inner > .item {
