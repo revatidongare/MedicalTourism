@@ -6,11 +6,21 @@
 					<p class="bold text-left"><i class="fa fa-clock-o"></i> Monday-Saturday, 8am to 10pm </p>
 					</div>
 					<div class="col-lg-8 col-sm-4 col-md-4" align="right">
-					
+					<b>
 					<a class="bold text-right" data-toggle="modal" data-target="#exampleModal">
-  						<b>Login</b>
+  						<img src="img/photo/user.jpg" width="30" height="30">Login
 					</a>
-
+				</b>
+					<!--<a class="bold text-right" data-toggle="modal" style="padding:10px"; data-target="#exampleModal">
+  						<b>Support</b>
+					</a>-->
+					
+					<b>								
+					<a class="bold text-right"  style="padding:10px"; data-toggle="modal" data-target="#exampleModal">
+  					<img src="img/photo/support.jpg" width="30" height="30">Support
+  					</a></b>															
+													
+													
 					<b><a class="bold text-right" style="padding:10px";>Contact</a></b>
 					</div>
 				</div>
