@@ -14,190 +14,10 @@
 		<section id="intro" class="intro">
 			<div class="intro-content">
 				<div class="container" style="max-width: 90%;">
-					<div class="row">
-						<div class="col-lg-9">
-							<div class="col-lg-5">
-								<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-									
-									<h2 class="h-ultra">Dial Doctor</h2>
-								</div>
-								<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-									<h4 class="h-light">Provide <b> <span class="color">best quality healthcare</span> </b>for you</h4>
-								</div>
-								<div class="well well-trans">
-									<div class="wow fadeInLeft" data-wow-delay="0.1s">
-
-										<ul class="lead-list">
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly<br>premium packages</strong><br /></span></li>
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br /></span></li>
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br /></span></li>
-										</ul>
-
-									</div>
-								</div>
-
-
-							</div>
-
-							<div class="col-lg-7">
-								<div class="form-wrapper">
-									<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-
-										<div class="panel panel-skin">
-											<div class="panel-heading" >
-												<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Find Doctor </h3>
-											</div>
-											<div class="panel-body">
-												<form role="form" class="lead">
-													<div class="row">
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-
-																<div class="form-group">
-																	<label for="exampleFormControlSelect1">COUNTRY</label>
-																	<select class="form-control" id="exampleFormControlSelect1" >
-																		<option value="0">country</option>
-																		<option value="1">India</option>
-																		<option value="2">Australia</option>
-																		<option value="3">Germany</option>
-																		<option value="4">Dubai</option>
-																	</select>
-
-
-																</div>
-
-															</div>
-														</div>
-
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">STATES</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">states</option>
-																	<option value="1">Karnataka</option>
-																	<option value="2">Maharashtra</option>
-																	<option value="3">Bihar</option>
-																	<option value="4">Gujarat</option>
-																</select>
-
-															</div>
-														</div>
-
-
-
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">CITY</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">city</option>
-																	<option value="1">Kochi</option>
-																	<option value="2">Banglore</option>
-																	<option value="3">Mumbai</option>
-																	<option value="4">Delhi</option>
-																</select>
-															</div>
-
-														</div>
-
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">SEARCH SPECIALISTS</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">Category</option>
-																	<option value="1">Cardiologisit</option>
-																	<option value="2">Gynocologisit/Obstetrician</option>
-																	<option value="3">Genral Physician</option>
-																	<option value="4">Homoeopath</option>
-																	<option value="5">Dermologisit</option>
-																	<option value="6">Ayurveda</option>
-																	<option value="4">Dentist</option>
-																</select>
-
-															</div>
-														</div>
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">SEARCH DOCTOR</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
-																</select>
-
-															</div>
-														</div>
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">HOSPITALS/CLINICS</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
-																</select>
-
-															</div>
-														</div>
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">SEARCH LABORATORY</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
-																</select>
-
-															</div>
-														</div>
-
-
-													</div>
-													<div class="row" align="center">
-														<div class ="col-lg-4"> </div>
-														<div class="col-lg-4">
-
-															<input type="text-center" value="Submit" class="btn btn-skin btn-block btn-lg">
-														</div>
-													</div>
-
-												</form>
-											</div>
-										</div>				
-
-									</div>
-								</div>
-							</div>
-						</div>
-
 					<section class="col-lg-3" style="">
 						<div class="row">
 
-							<div class="col-lg-12" style="padding-right: 40px">
+							<div class="col-lg-12" style="padding-left: 20px">
 								<div class="card text-white" style="height:17rem; margin-top: 0.5rem; border: 0">
 									<div class="card-body" style="background-color: white;padding: 0;">
 										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
@@ -230,6 +50,188 @@
 							</div>	
 						</div>
 					</section>					
+					<!--<div class="row">-->
+						<div class="col-lg-9">
+							
+							<div class="col-lg-7">
+								<div class="form-wrapper">
+									<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+										<div class="panel panel-skin">
+											<div class="panel-heading" >
+												<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Find Doctor </h3>
+											</div>
+											<div class="panel-body">
+												<form role="form" class="lead">
+													<div class="row">
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+
+																<div class="form-group">
+																	<label for="exampleFormControlSelect1">Search Country</label>
+																	<select class="form-control" id="exampleFormControlSelect1" >
+																		<option value="0">country</option>
+																		<option value="1">India</option>
+																		<option value="2">Australia</option>
+																		<option value="3">Germany</option>
+																		<option value="4">Dubai</option>
+																	</select>
+
+
+																</div>
+
+															</div>
+														</div>
+
+
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search State</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">states</option>
+																	<option value="1">Karnataka</option>
+																	<option value="2">Maharashtra</option>
+																	<option value="3">Bihar</option>
+																	<option value="4">Gujarat</option>
+																</select>
+
+															</div>
+														</div>
+
+
+
+
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search City</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">city</option>
+																	<option value="1">Kochi</option>
+																	<option value="2">Banglore</option>
+																	<option value="3">Mumbai</option>
+																	<option value="4">Delhi</option>
+																</select>
+															</div>
+
+														</div>
+
+
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search specialization</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">Category</option>
+																	<option value="1">Cardiologisit</option>
+																	<option value="2">Gynocologisit/Obstetrician</option>
+																	<option value="3">Genral Physician</option>
+																	<option value="4">Homoeopath</option>
+																	<option value="5">Dermologisit</option>
+																	<option value="6">Ayurveda</option>
+																	<option value="4">Dentist</option>
+																</select>
+
+															</div>
+														</div>
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search doctor</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">search</option>
+																	<option value="1"></option>
+																	<option value="2"></option>
+																	<option value="3"></option>
+																	<option value="4"></option>
+																	<option value="5"></option>
+																	<option value="6"></option>
+																	<option value="4"></option>
+																</select>
+
+															</div>
+														</div>
+
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search hospitals/clinics</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">search</option>
+																	<option value="1"></option>
+																	<option value="2"></option>
+																	<option value="3"></option>
+																	<option value="4"></option>
+																	<option value="5"></option>
+																	<option value="6"></option>
+																	<option value="4"></option>
+																</select>
+
+															</div>
+														</div>
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search Laboratory</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">search</option>
+																	<option value="1"></option>
+																	<option value="2"></option>
+																	<option value="3"></option>
+																	<option value="4"></option>
+																	<option value="5"></option>
+																	<option value="6"></option>
+																	<option value="4"></option>
+																</select>
+
+															</div>
+														</div>
+
+
+													</div>
+													<div class="row" align="center">
+														<div class ="col-lg-4"> </div>
+														<div class="col-lg-4">
+
+															<input type="text-center" value="Submit" class="btn btn-skin btn-block btn-lg">
+														</div>
+													</div>
+
+												</form>
+											</div>
+										</div>				
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+									
+									<h2 class="h-ultra">Dial Doctor</h2>
+								</div>
+								<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+									<h4 class="h-light">Provide <b> <span class="color">best quality healthcare</span> </b>for you</h4>
+								</div>
+								<div class="well well-trans">
+									<div class="wow fadeInLeft" data-wow-delay="0.1s">
+
+										<ul class="lead-list">
+											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly<br>premium packages</strong><br /></span></li>
+											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br /></span></li>
+											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br /></span></li>
+										</ul>
+
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					
 					</div>
 				</div>
 			</div>		
@@ -327,7 +329,7 @@
 
 -->
 <!-- Section: services -->
-<!--
+
 <section id="service" class="home-section nopadding paddingtop-60">
 
 	<div class="container">
@@ -419,7 +421,7 @@
 		</div>		
 	</div>
 </section>
--->
+
 <!-- /Section: services -->
 
 
@@ -772,8 +774,8 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="wow lightSpeedIn" data-wow-delay="0.1s">
 					<div class="section-heading text-center">
-						<h2 class="h-bold">Our partner</h2>
-						<p>Take charge of your health today with our specially designed health packages</p>
+						<h2 class="h-bold">Our trusted Hospitals</h2>
+						<p>Take charge of your health today with our trusted hospitals</p>
 					</div>
 				</div>
 				<div class="divider-short"></div>
@@ -824,7 +826,21 @@
 <script src="js/nivo-lightbox.min.js"></script>
 <script src="js/custom.js"></script>
 
+<div class="fsElement fsEmbed footer-translate" id="fsEl_25395" data-use-new="true" >
 
+
+	<div class="fsElementContent" >
+		<div id="google_translate_element"></div><script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+			}
+		</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<!-- Google Translate End -->
+
+	</div>
+
+
+</div>
 </body>
 
 </html>

@@ -348,8 +348,8 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="wow lightSpeedIn" data-wow-delay="0.1s">
 					<div class="section-heading text-center">
-					<h2 class="h-bold">Our partner</h2>
-					<p>Take charge of your health today with our specially designed health packages</p>
+					<h2 class="h-bold">Our Trust Hospitals</h2>
+					<p>Take charge of your health today with our trust hospitals </p>
 					</div>
 					</div>
 					<div class="divider-short"></div>
@@ -383,7 +383,7 @@
             </div>
 	</section>	
 
-	
+	<?php include'includes/footer.php';?>
 
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
