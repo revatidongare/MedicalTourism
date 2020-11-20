@@ -31,14 +31,14 @@ a:focus {
 
 /* button */
 .btn-skin {
-  background-color: #4ACCD1;
-  border-color: #4ACCD1;
+  background-color: #00a3cc;
+  border-color: #00a3cc;
 }
 
 
 /* top */
 .top-area {
-	background: #3fbbc0;
+	background: #00a3cc;
 }
 
 /* menu */
@@ -49,7 +49,7 @@ a:focus {
 .navbar-custom.top-nav-collapse .nav li a:hover,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li.active a,.navbar-custom.top-nav-collapse .nav li.active a  {
-    color: #3fbbc0;
+    color: #666;
 }
 
 
@@ -67,7 +67,7 @@ a:focus {
 	background-color: #4ACCD1;
 }
 .color {
-	color: #4ACCD1;
+	color: #00a3cc;
 }
 
 /* pricing box  */
@@ -82,7 +82,7 @@ a:focus {
 
 /* team */
 .cbp-l-grid-team-name {
-    color: #3fbbc0;
+    color: #00a3cc;
 }
 
 .cbp-l-filters-button .cbp-filter-counter {
@@ -91,8 +91,8 @@ a:focus {
 
 .cbp-l-filters-alignLeft .cbp-filter-item-active {
     /* @editable properties */
-    background-color: #4ACCD1;
-    border:1px solid #4ACCD1;
+    background-color: #00a3cc;
+    border:1px solid #00a3cc;
 }
 
 .cbp-l-filters-dropdownWrap {

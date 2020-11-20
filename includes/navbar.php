@@ -41,7 +41,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.php">
-                   <img src="img/photo/DialLogo.PNG" alt="" width="120" height="90" />
+                   <img src="img/photo/trustdoc.PNG" alt="" width="250" height="100" />
                 </a>
             </div>
 

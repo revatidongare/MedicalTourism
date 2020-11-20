@@ -9,6 +9,10 @@
     .mySlides {display: none;}
     img {vertical-align: middle;}
 
+    
+
+   
+
     /* Slideshow container */
     .slideshow-container {
       max-width: 100%px;
@@ -19,7 +23,7 @@
 
     /* Caption text */
     .text {
-      color: #f2f2f2;
+      color: #070404;
       font-size: 15px;
       padding: 8px 12px;
       position: absolute;
@@ -48,6 +52,17 @@
       transition: background-color 0.6s ease;
     }
 
+     /*middle Title*/
+    .middle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #f2f2f2;
+  opacity: 0.8;
+}
+
     .active {
       background-color: #717171;
     }
@@ -66,7 +81,7 @@
     }
 
     @keyframes fade {
-      from {opacity: .4} 
+      from {opacity:4} 
       to {opacity: 1}
     }
 
@@ -77,41 +92,52 @@
   </style>
 <body>
 
-  
-
   <div class="slideshow-container">
+
+    
 
     <div class="mySlides fade">
       <div class="numbertext">1 / 5</div>
-      <img src="img/slides/slides4/13.jpg" style="width:100%">
+      <img src="img/slides/slides4/21.jpg" style="width:100%">
+      
       <!-- <div class="text">Caption Text</div>-->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 5</div>
-      <img src="img/slides/slides4/3.jpg" style="width:100%">
+      <img src="img/slides/slides4/23.jpg" style="width:100%">
+      
       <!-- <div class="text">Caption Two</div>-->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 5</div>
-      <img src="img/slides/slides4/2.jpg" style="width:100%">
+      <img src="img/slides/slides4/27.jpg" style="width:100%">
+      
       <!--<div class="text">Caption Three</div>-->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 5</div>
-      <img src="img/slides/slides4/12.jpg" style="width:100%">
+      <img src="img/slides/slides4/23.jpg" style="width:100%">
+      
       <!-- <div class="text">Caption Three</div>-->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 5</div>
-      <img src="img/slides/slides4/15.jpg" style="width:100%">
+      <img src="img/slides/slides4/21.jpg" style="width:100%">
+
+      
+
       <!-- <div class="text">Caption Three</div>-->
     </div>
+    <div class="middle">
+    <h1>COMING SOON</h1>
+    <b><p style="color:#070404;">We are launching medical tourism on international and domestic level as soon . Stay tuned for new medical plans and best treatment anywhere.</p></b>
+  
+    </div>
 
-  </div>
   <br>
 
   <div style="text-align:center">
@@ -120,7 +146,15 @@
     <span class="dot"></span> 
     <span class="dot"></span> 
     <span class="dot"></span> 
+
   </div>
+
+  <br>
+
+
+  
+</div>
+
 
   <script>
     var slideIndex = 0;
@@ -140,9 +174,11 @@
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
 }
 </script>
 
+
 </body>
+
 </html> 
