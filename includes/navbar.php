@@ -22,7 +22,7 @@
   					</a></b>															
 													
 													
-					<b><a class="bold text-right" href="#footer"style="padding:10px";>Contact</a></b>
+					<b><a class="bold text-right" href="#footer" style="padding:10px";>Contact</a></b>
             
 					</div>
           <div class="fsElementContent">

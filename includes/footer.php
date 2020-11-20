@@ -11,17 +11,21 @@
 						</p>
 					</div>
 					</div>
+				
 					<div class="wow fadeInDown" data-wow-delay="0.1s">
 					<div class="widget">
 						<h5>Information</h5>
+						
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="#" style="color:#000000">Home</a></li>
 							<li><a href="#">Laboratory</a></li>
 							<li><a href="#">Medical treatment</a></li>
 							<li><a href="#">Terms & conditions</a></li>
 						</ul>
+					
 					</div>
 					</div>
+
 				</div>
 				<div class="col-sm-6 col-md-4">
 					<div class="wow fadeInDown" data-wow-delay="0.1s">
