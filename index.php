@@ -2,7 +2,14 @@
 <html lang="en">
 
 <?php include'includes/head.php';?>
+<script>
+	$('#myCarousel').on('slid.bs.carousel', function (e) {
+  $('#myCarousel').carousel('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
+})
 
+$('#myCarousel').carousel('1') // Will start sliding to the slide 1 and returns to the caller
+$('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
+</script>
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
 	<div id="wrapper">
@@ -14,10 +21,9 @@
 		<section id="intro" class="intro">
 			<div class="intro-content">
 				<div class="container" style="max-width: 90%;">
-					<section class="col-lg-3" style="">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="row">
-
-							<div class="col-lg-12" style="padding-left: 20px">
+							<div class="col-lg-12 " style="padding-left: 20px">
 								<div class="card text-white" style="height:17rem; margin-top: 0.5rem; border: 0">
 									<div class="card-body" style="background-color: white;padding: 0;">
 										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
@@ -28,7 +34,12 @@
 													display: block;
 												}
 											</style>
-										</iframe>
+										</iframe>										
+									</div>
+								</div>
+								<div class="card text-white" style="height:17rem; margin-top: 0.5rem; border: 0">
+									<div class="card-body" style="background-color: white;padding: 0;">
+										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
 
 										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
 											<style >
@@ -36,24 +47,33 @@
 													display: block;
 												}
 											</style>
-										</iframe>
-									<!--	<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/0WUt8x89pDU?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
-											<style >
-												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
-													display: block;
-												}
-											</style>
-										</iframe>
-										-->
+										</iframe>										
 									</div>
 								</div>
-							</div>	
+							</div>					
+
+
+							<!-- <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+								<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img  src="img/1.jpg" width="100%" alt="First slide">
+										</div>
+										<div class="carousel-item">
+											<img src="img/2.jpg" width="100%" alt="Second slide">
+										</div>
+										<div class="carousel-item">
+											<img src="img/3.jpg" width="100%" alt="Third slide">
+										</div>
+									</div>
+								</div>
+							</div> -->	
 						</div>
-					</section>					
-					<!--<div class="row">-->
-						<div class="col-lg-9">
+					</div>					
+					<!-- <div class="row"> -->
+						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 							
-							<div class="col-lg-7">
+							<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 								<div class="form-wrapper">
 									<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
 
@@ -206,10 +226,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5">
-								<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-									
-									<h2 class="h-ultra">Dial Doctor</h2>
+							<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+								<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">									
+									<h2 class="h-ultra">Trust You Doctor</h2>
 								</div>
 								<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
 									<h4 class="h-light">Provide <b> <span class="color">best quality healthcare</span> </b>for you</h4>
@@ -231,7 +250,7 @@
 
 						</div>
 
-					
+					<!-- </div> -->
 					</div>
 				</div>
 			</div>		
