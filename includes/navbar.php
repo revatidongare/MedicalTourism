@@ -4,7 +4,16 @@
 
 				<div class="row">
 					<div class=" col-lg-4 col-sm-4 col-md-4">
-					<p class="bold text-left"><i class="fa fa-clock-o"></i> Monday-Saturday, 8am to 10pm </p>
+					<!--<p class="bold text-left"><i class="fa fa-clock-o"></i> Medical Tourisr</p>-->
+          <b>
+          <a class="bold text-left" data-toggle="modal" data-target="#exampleModal">
+          <!--<img src="img/photo/user.jpg" width="30" height="30">-->International Tourism
+          </a>
+        </b>
+        <b>
+        <a class="bold text-left" style="padding:5px"; data-toggle="modal" data-target="#exampleModal">
+            Domestic Tourism
+            </a></b>    
 					</div>
 					<div class="col-lg-8 col-sm-4 col-md-4" align="right">
 					<b>
@@ -41,7 +50,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.php">
-                   <img src="img/photo/trustdoc.PNG" alt="" width="250" height="100" />
+                   <img src="img/photo/trust.PNG" />
                 </a>
             </div>
 

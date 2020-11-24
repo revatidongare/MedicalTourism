@@ -469,7 +469,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 				<div id="filters-container" class="cbp-l-filters-alignLeft">
 					<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (<div class="cbp-filter-counter"></div>)</div>
 					<div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (<div class="cbp-filter-counter"></div>)</div>
-					<div data-filter=".psychiatrist" class="cbp-filter-item">Gynocologist/ (<div class="cbp-filter-counter"></div>)</div>
+					<div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist(<div class="cbp-filter-counter"></div>)</div>
 					<div data-filter=".neurologist" class="cbp-filter-item">Neurologist (<div class="cbp-filter-counter"></div>)</div>
 				</div>
 
@@ -477,6 +477,38 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 					<ul>
 						<li class="cbp-item psychiatrist">
 							<a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
+								<div class="cbp-caption-defaultWrap">
+									<img src="img/team/3.png" alt="" width="100%">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<div class="cbp-l-caption-text">VIEW PROFILE</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							<a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Ashok Alim Chandani</a>
+							<div class="cbp-l-grid-team-position">Psychiatrist</div>
+						</li>
+						<li class="cbp-item cardiologist">
+							<a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
+								<div class="cbp-caption-defaultWrap">
+									<img src="img/team/2.jpeg" alt="" width="100%">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<div class="cbp-l-caption-text">VIEW PROFILE</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							<a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Dr. Rajneesh Kapoor</a>
+							<div class="cbp-l-grid-team-position">Cardiologist</div>
+						</li>
+						<li class="cbp-item cardiologist">
+							<a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
 								<div class="cbp-caption-defaultWrap">
 									<img src="img/team/1.jpg" alt="" width="100%">
 								</div>
@@ -488,39 +520,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 									</div>
 								</div>
 							</a>
-							<a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-							<div class="cbp-l-grid-team-position">Psychiatrist</div>
-						</li>
-						<li class="cbp-item cardiologist">
-							<a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/2.jpg" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-							<div class="cbp-l-grid-team-position">Cardiologist</div>
-						</li>
-						<li class="cbp-item cardiologist">
-							<a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/3.jpg" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
+							<a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Dr. Tapan Ghose</a>
 							<div class="cbp-l-grid-team-position">Cardiologist</div>
 						</li>
 						<li class="cbp-item neurologist">
@@ -536,7 +536,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 									</div>
 								</div>
 							</a>
-							<a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
+							<a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Arun Garg</a>
 							<div class="cbp-l-grid-team-position">Neurologist</div>
 						</li>
 
@@ -604,39 +604,39 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								<div class="block-text rel zmin">
 									<a title="" href="#">Emergency Contraception</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">					
 									<img src="img/testimonials/1.jpg" alt="" class="person img-circle" />
 									<a title="" href="#">Anna</a>
-									<span>Chicago, Illinois</span>
+									<span>Banglore</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6 hidden-xs">
 								<div class="block-text rel zmin">
 									<a title="" href="#">Orthopedic Surgery</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>This  is really flawless. Good for elderly people. Best part of this home delivery of medicine at discounted price.</p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">
 									<img src="img/testimonials/2.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Matthew G</a>
-									<span>San Antonio, Texas</span>
+									<a title="" href="#">Gisshen </a>
+									<span>Pondicherry</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
 								<div class="block-text rel zmin">
 									<a title="" href="#">Medical consultation</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>I don’t usually rely on apps for health stuff, but this is  exceeded my expectations. Thanks, guys!</p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">
 									<img src="img/testimonials/3.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Scarlet Smith</a>
-									<span>Dallas, Texas</span>
+									<a title="" href="#">Smita</a>
+									<span>Delhi</span>
 								</div>
 							</div>
 						</div>
@@ -645,39 +645,39 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								<div class="block-text rel zmin">
 									<a title="" href="#">Birth control pills</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>This  is really flawless. Good for elderly people. Best part of this home delivery of medicine at discounted price.</p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">
 									<img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Lucas Thompson</a>
-									<span>Austin, Texas</span>
+									<a title="" href="#">Thanmay</a>
+									<span>Banglore</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6 hidden-xs">
 								<div class="block-text rel zmin">
 									<a title="" href="#">Radiology</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>I don’t usually rely on apps for health stuff, but this is  exceeded my expectations. Thanks, guys!</p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">
 									<img src="img/testimonials/5.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Ella Mentree</a>
-									<span>Fort Worth, Texas</span>
+									<a title="" href="#">Ella </a>
+									<span>Chennai</span>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
 								<div class="block-text rel zmin">
 									<a title="" href="#">Cervical Lesions</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span>  </span></div>
-									<p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">
 									<img src="img/testimonials/6.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Suzanne Adam</a>
-									<span>Detroit, Michigan</span>
+									<a title="" href="#">Suzanne </a>
+									<span>GOA</span>
 								</div>
 							</div>
 						</div>

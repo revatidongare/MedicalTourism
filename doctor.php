@@ -30,7 +30,7 @@
 				
             <div id="filters-container" class="cbp-l-filters-alignLeft">
                 <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (<div class="cbp-filter-counter"></div>)</div>
-                <div data-filter="." class="cbp-filter-item">Cardiologist (<div class="cbp-filter-counter"></div>)</div>
+                <div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (<div class="cbp-filter-counter"></div>)</div>
                 <div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist (<div class="cbp-filter-counter"></div>)</div>
                 <div data-filter=".neurologist" class="cbp-filter-item">Neurologist (<div class="cbp-filter-counter"></div>)</div>
             </div>
@@ -39,6 +39,38 @@
                 <ul>
                     <li class="cbp-item psychiatrist">
                         <a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/3.png" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Ashok Alim Chandani</a>
+                        <div class="cbp-l-grid-team-position">Psychiatrist</div>
+                    </li>
+                    <li class="cbp-item cardiologist">
+                        <a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="img/team/2.jpeg" alt="" width="100%">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW PROFILE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Dr.Rajneesh Kapoor</a>
+                        <div class="cbp-l-grid-team-position">Cardiologist</div>
+                    </li>
+                    <li class="cbp-item cardiologist">
+                        <a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="img/team/1.jpg" alt="" width="100%">
                             </div>
@@ -50,39 +82,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-                        <div class="cbp-l-grid-team-position">Psychiatrist</div>
-                    </li>
-                    <li class="cbp-item cardiologist">
-                        <a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="img/team/2.jpg" alt="" width="100%">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-                        <div class="cbp-l-grid-team-position">Cardiologist</div>
-                    </li>
-                    <li class="cbp-item cardiologist">
-                        <a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="img/team/3.jpg" alt="" width="100%">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
+                        <a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Dr. Tapan Ghose</a>
                         <div class="cbp-l-grid-team-position">Cardiologist</div>
                     </li>
                     <li class="cbp-item neurologist">
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
+                        <a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Arun Garg</a>
                         <div class="cbp-l-grid-team-position">Neurologist</div>
                     </li>
 
