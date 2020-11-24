@@ -604,7 +604,11 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								<div class="block-text rel zmin">
 									<a title="" href="#">Emergency Contraception</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
+<<<<<<< Updated upstream
 									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
+=======
+									<p>Very convenient and useful. I wanted some tests run for my parents who were staying with me .Since I couldnt travel with them to the lab, I tried using this after hearing an ad. A lab person came home and took the blood samples. I got both their reports on my app and doctors were also assigned for us.</p>
+>>>>>>> Stashed changes
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">					

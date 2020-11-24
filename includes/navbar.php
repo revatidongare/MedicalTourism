@@ -61,6 +61,8 @@
 				<li><a href="doctor.php">Our Doctors</a></li>
 				<li><a href="speciality.php">Medical Tourism</a></li>
 				<li><a href="#facilities">International Forum</a></li>
+        <li><a href="#Ayurvedic">Ayurvedic</a></li>
+        <li><a href="#">Nachrotheraphy</a></li>
 				<!--<li><a href="#pricing">Pricing</a></li>-->
 				<!--<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
