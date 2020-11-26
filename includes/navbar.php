@@ -3,7 +3,7 @@
 			<div class="container">
 
 				<div class="row">
-					<div class=" col-lg-4 col-sm-4 col-md-4">
+					<div class=" col-lg-2.5 col-sm-4 col-md-4" align="left">
 					<!--<p class="bold text-left"><i class="fa fa-clock-o"></i> Medical Tourisr</p>-->
           <b>
           <a class="bold text-left" data-toggle="modal" data-target="#exampleModal">
@@ -11,7 +11,7 @@
           </a>
         </b>
         <b>
-        <a class="bold text-left" style="padding:5px"; data-toggle="modal" data-target="#exampleModal">
+        <a class="bold text-left" style="padding:10px"; data-toggle="modal" data-target="#exampleModal">
             Domestic Tourism
             </a></b>    
 					</div>
@@ -60,7 +60,7 @@
 				<li class="active"><a  href="index.php">Home</a></li>
 				<li><a href="doctor.php">Our Doctors</a></li>
 				<li><a href="speciality.php">Medical Tourism</a></li>
-				<li><a href="#facilities">International Forum</a></li>
+				<li><a href="speciality.php">International Forum</a></li>
         <li><a href="#Ayurvedic">Ayurvedic</a></li>
         <li><a href="#">Nachrotheraphy</a></li>
 				<!--<li><a href="#pricing">Pricing</a></li>-->
@@ -89,19 +89,20 @@
     </div>
         <div class="modal-body">
         <form>
-          <div class="form-group">
-            <label for="user-name" class="col-form-label">Name</label>
-            <input type="text" class="form-control" id="name">
-          </div>
+          
           <div class="form-group">
             <label for="email" class="col-form-label">Email</label>
-            <input type="text" class="form-control" id="Email">
+            <input type="text" class="form-control" id="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
        <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>-->
-        <button type="button" class="btn btn-primary">Next & Save</button>
+        <button type="submit" class="btn btn-primary">Login</button>
       </div>
       </div>
       <div class="modal-body">

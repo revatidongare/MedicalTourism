@@ -18,9 +18,9 @@
 						
 						<ul>
 							<li><a href="#" style="color:#000000">Home</a></li>
-							<li><a href="#">Laboratory</a></li>
-							<li><a href="#">Medical treatment</a></li>
-							<li><a href="#">Terms & conditions</a></li>
+							<li><a href="#" style="color:#000000">Laboratory</a></li>
+							<li><a href="#" style="color:#000000">Medical treatment</a></li>
+							<li><a href="#" style="color:#000000">Terms & conditions</a></li>
 						</ul>
 					
 					</div>
@@ -38,13 +38,19 @@
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
-								</span> Monday-Saturday, 10 am to 6 pm
+								</span> Monday-Saturday, 9 am to 7 pm
 							</li>
 							<li>
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
 								</span> +91 20-48601029
+							</li>
+							<li>
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+								</span> +91 932556756
 							</li>
 							<li>
 								<span class="fa-stack fa-lg">
@@ -70,7 +76,7 @@
 						<h5>Follow us</h5>
 						<ul class="company-social">
 								<li class="social-facebook"><a href=""><i class="fa fa-facebook"></i></a></li>
-								<li class="social-twitter"><a href=""><i class="fa fa-twitter"></i></a></li>
+								<!--<li class="social-twitter"><a href=""><i class="fa fa-twitter"></i></a></li>-->
 								<li class="social-google"><a href=""><i class="fa fa-google-plus"></i></a></li>
 								<!--<li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>-->
 								<li class="social-instagram"><a href=""><i class="fa fa-instagram"></i></a></li>
@@ -87,7 +93,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-12">
 					<div class="wow fadeInLeft" data-wow-delay="0.1s">
 					<div class="text-right">
-					<p>&copy;Copyright 2020 - DIAL DOCTOR. All rights reserved.</p>
+					<p>&copy;Copyright 2020 - TRUST U DOCTOR. All rights reserved.</p>
 					</div>
 					</div>
 				</div>

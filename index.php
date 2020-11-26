@@ -259,7 +259,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 		<!-- /Section: intro -->
 
 		<!-- Section: boxes -->
- <!--   <section id="boxes" class="home-section paddingtop-80">
+   <section id="boxes" class="home-section paddingtop-80">
 	
 		<div class="container">
 			<div class="row">
@@ -268,9 +268,9 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 						<div class="box text-center">
 							
 							<i class="fa fa-check fa-3x circled bg-skin"></i>
-							<h4 class="h-bold">Make an appoinment</h4>
+							<h4 class="h-bold">Make an appointment</h4>
 							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+							Here you can make appointment with your doctor
 							</p>
 						</div>
 					</div>
@@ -282,7 +282,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 							<i class="fa fa-list-alt fa-3x circled bg-skin"></i>
 							<h4 class="h-bold">Choose your package</h4>
 							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+							You have an options to choose the packages which you want.
 							</p>
 						</div>
 					</div>
@@ -293,28 +293,25 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 							<i class="fa fa-user-md fa-3x circled bg-skin"></i>
 							<h4 class="h-bold">Help by specialist</h4>
 							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+							Some guidence by our specialists
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-md-3">
-					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
-							
-							<i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
-							<h4 class="h-bold">Get diagnostic report</h4>
-							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-							</p>
-						</div>
-					</div>
-				</div>
+					
+							<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+								<div class="cta-btn">
+									<a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>	
+								</div>
+							</div>
+						
+				</div> 
 			</div>
 		</div>
 
 	</section>
--->
+
 <!-- /Section: boxes -->
 
 <!--
@@ -332,13 +329,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-								<div class="cta-btn">
-									<a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>	
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -346,9 +337,9 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 	</div>
 </section>	
 
--->
-<!-- Section: services -->
 
+<!-- Section: services -->
+<!--
 <section id="service" class="home-section nopadding paddingtop-60">
 
 	<div class="container">
@@ -440,7 +431,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 		</div>		
 	</div>
 </section>
-
+-->
 <!-- /Section: services -->
 
 
@@ -604,11 +595,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								<div class="block-text rel zmin">
 									<a title="" href="#">Emergency Contraception</a>
 									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-<<<<<<< Updated upstream
 									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
-=======
-									<p>Very convenient and useful. I wanted some tests run for my parents who were staying with me .Since I couldnt travel with them to the lab, I tried using this after hearing an ad. A lab person came home and took the blood samples. I got both their reports on my app and doctors were also assigned for us.</p>
->>>>>>> Stashed changes
 									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
 								</div>
 								<div class="person-text rel text-light">					

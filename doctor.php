@@ -114,6 +114,7 @@
 	
 		
 	<!-- Section: works -->
+	<!--
     <section id="facilities" class="home-section paddingbot-60">
 		<div class="container marginbot-50">
 			<div class="row">
@@ -146,11 +147,12 @@
             </div>
 		</div>
 	</section>
+-->
 	<!-- /Section: works -->
 	
 	
 	<!-- Section: testimonial -->
-    <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
+ <!--   <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
 
 <div class="carousel-reviews broun-block">
     <div class="container">
@@ -254,12 +256,12 @@
         </div>
     </div>
 </div>
-	</section>
+	</section>-->
 	<!-- /Section: testimonial -->
 	
 
 	<!-- Section: pricing -->	
-	<section id="pricing" class="home-section bg-gray paddingbot-60">	
+<!--	<section id="pricing" class="home-section bg-gray paddingbot-60">	
 		<div class="container marginbot-50">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
@@ -339,7 +341,7 @@
 			</div>				
 				
             </div>
-	</section>	 
+	</section>	-->
 	<!-- /Section: pricing -->
 	
 	<section id="partner" class="home-section paddingbot-60">	
