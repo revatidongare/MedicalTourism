@@ -227,7 +227,43 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 								</div>
 							</div>
 							<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-								<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">									
+
+								<div class="row">
+							<div class="col-lg-12 " style="padding-left: 20px">
+								<div class="card text-white" style="margin-top: 0.5rem; border: 0">
+									<div class="card-body" style="background-color: white;padding: 0;">
+										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+										<img src="img/1.jpg" width="100%">
+									</div>
+								</div>
+								<div class="card text-white" style="margin-top: 0.5rem; border: 0">
+									<div class="card-body" style="background-color: white;padding: 0;">
+										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+
+												<img src="img/2.jpg" width="100%">								
+									</div>
+								</div>
+							</div>					
+
+
+							<!-- <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+								<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img  src="img/1.jpg" width="100%" alt="First slide">
+										</div>
+										<div class="carousel-item">
+											<img src="img/2.jpg" width="100%" alt="Second slide">
+										</div>
+										<div class="carousel-item">
+											<img src="img/3.jpg" width="100%" alt="Third slide">
+										</div>
+									</div>
+								</div>
+							</div> -->	
+						</div>
+
+								<!-- <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">									
 									<h2 class="h-ultra">Trust You Doctor</h2>
 								</div>
 								<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
@@ -243,7 +279,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 										</ul>
 
 									</div>
-								</div>
+								</div> -->
 
 
 							</div>
