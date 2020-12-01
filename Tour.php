@@ -3,15 +3,14 @@
 <?php include'includes/head.php';?>
 <body>
   <?php include'includes/navbar.php';?>
+
   <style>
     * {box-sizing: border-box;}
     body {font-family: Verdana, sans-serif;}
     .mySlides {display: none;}
     img {vertical-align: middle;}
 
-    
 
-   
 
     /* Slideshow container */
     .slideshow-container {

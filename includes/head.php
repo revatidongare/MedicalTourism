@@ -22,5 +22,7 @@
 	<!-- template skin -->
 	<link id="t-colors" href="color/default.css" rel="stylesheet">
 
+	<!-- Smartsupp Live Chat script -->
+<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c3c4c4eb4e774bbe8b3b5fb97758292322596068b7ce48129a806ac71c1d403b.js"></script>
 
 </head>

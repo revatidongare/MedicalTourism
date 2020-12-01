@@ -11,11 +11,11 @@
           </a>
         </b>
         <b>
-        <a class="bold text-left" style="padding:10px"; data-toggle="modal" data-target="#exampleModal">
-            Domestic Tourism
+        <a class="bold text-left" style="padding:5.5px"; data-toggle="modal" data-target="#exampleModal">
+            DomesticTourism
             </a></b>    
 					</div>
-					<div class="col-lg-8 col-sm-4 col-md-4" align="right">
+					<div class="col-lg-12 col-sm-4 col-md-4" align="right">
 					<b>
 					<a class="bold text-right" data-toggle="modal" data-target="#exampleModal">
   				<!--<img src="img/photo/user.jpg" width="30" height="30">-->Login
@@ -59,8 +59,8 @@
 			  <ul class="nav navbar-nav">
 				<li class="active"><a  href="index.php">Home</a></li>
 				<li><a href="doctor.php">Our Doctors</a></li>
-				<li><a href="speciality.php">Medical Tourism</a></li>
-				<li><a href="speciality.php">International Forum</a></li>
+				<li><a href="Tour.php">Medical Tourism</a></li>
+				<li><a href="Tour.php">International Forum</a></li>
         <li><a href="#Ayurvedic">Ayurvedic</a></li>
         <li><a href="#">Nachrotheraphy</a></li>
 				<!--<li><a href="#pricing">Pricing</a></li>-->

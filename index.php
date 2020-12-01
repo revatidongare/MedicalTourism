@@ -137,8 +137,6 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 															</div>
 
 														</div>
-
-
 														<div class="col-lg-6 col-sm-12 col-md-6">
 															<div class="form-group">
 
@@ -152,6 +150,23 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 																	<option value="5">Dermologisit</option>
 																	<option value="6">Ayurveda</option>
 																	<option value="4">Dentist</option>
+																</select>
+
+															</div>
+														</div>
+														<div class="col-lg-6 col-sm-12 col-md-6">
+															<div class="form-group">
+
+																<label for="exampleFormControlSelect1">Search hospitals/clinics</label>
+																<select class="form-control" id="exampleFormControlSelect1" >
+																	<option value="0">search</option>
+																	<option value="1"></option>
+																	<option value="2"></option>
+																	<option value="3"></option>
+																	<option value="4"></option>
+																	<option value="5"></option>
+																	<option value="6"></option>
+																	<option value="4"></option>
 																</select>
 
 															</div>
@@ -174,23 +189,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 															</div>
 														</div>
 
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search hospitals/clinics</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
-																</select>
-
-															</div>
-														</div>
+														
 														<div class="col-lg-6 col-sm-12 col-md-6">
 															<div class="form-group">
 
