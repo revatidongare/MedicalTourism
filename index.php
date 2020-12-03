@@ -81,21 +81,24 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 											<div class="panel-heading" >
 												<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Find Doctor </h3>
 											</div>
+
 											<div class="panel-body">
-												<form role="form" class="lead">
+												<form role="form" class="lead" action="back.php">
 													<div class="row">
 														<div class="col-lg-6 col-sm-12 col-md-6">
 															<div class="form-group">
-
+																<?php include'config.php';?>
 
 																<div class="form-group">
 																	<label for="exampleFormControlSelect1">Search Country</label>
 																	<select class="form-control" id="exampleFormControlSelect1" >
-																		<option value="0">country</option>
-																		<option value="1">India</option>
-																		<option value="2">Australia</option>
-																		<option value="3">Germany</option>
-																		<option value="4">Dubai</option>
+																		<?php 
+																	$query="SELECT * FROM `country_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																	</select>
 
 
@@ -110,11 +113,13 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 																<label for="exampleFormControlSelect1">Search State</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">states</option>
-																	<option value="1">Karnataka</option>
-																	<option value="2">Maharashtra</option>
-																	<option value="3">Bihar</option>
-																	<option value="4">Gujarat</option>
+																	<?php 
+																	$query="SELECT * FROM `state_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 
 															</div>
@@ -128,11 +133,13 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 																<label for="exampleFormControlSelect1">Search City</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">city</option>
-																	<option value="1">Kochi</option>
-																	<option value="2">Banglore</option>
-																	<option value="3">Mumbai</option>
-																	<option value="4">Delhi</option>
+																	<?php 
+																	$query="SELECT * FROM `city_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 															</div>
 
@@ -142,14 +149,13 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 																<label for="exampleFormControlSelect1">Search specialization</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">Category</option>
-																	<option value="1">Cardiologisit</option>
-																	<option value="2">Gynocologisit/Obstetrician</option>
-																	<option value="3">Genral Physician</option>
-																	<option value="4">Homoeopath</option>
-																	<option value="5">Dermologisit</option>
-																	<option value="6">Ayurveda</option>
-																	<option value="4">Dentist</option>
+																	<?php 
+																	$query="SELECT * FROM `speciality_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 
 															</div>
@@ -159,14 +165,13 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 																<label for="exampleFormControlSelect1">Search hospitals/clinics</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
+																	<?php 
+																	$query="SELECT * FROM `clinic_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 
 															</div>
@@ -177,13 +182,14 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 																<label for="exampleFormControlSelect1">Search doctor</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
 																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
+																	<?php 
+																	$query="SELECT * FROM `doctor`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 
 															</div>
@@ -195,14 +201,13 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 																<label for="exampleFormControlSelect1">Search Laboratory</label>
 																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<option value="1"></option>
-																	<option value="2"></option>
-																	<option value="3"></option>
-																	<option value="4"></option>
-																	<option value="5"></option>
-																	<option value="6"></option>
-																	<option value="4"></option>
+																	<?php 
+																	$query="SELECT * FROM `lab_master`";
+																	$stmt=$conn->prepare($query);
+																	$stmt->execute();
+																	$row=$stmt->fetch();
+																	?>
+																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
 																</select>
 
 															</div>
@@ -228,21 +233,21 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 							<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
 
 								<div class="row">
-							<div class="col-lg-12 " style="padding-left: 20px">
-								<div class="card text-white" style="margin-top: 0.5rem; border: 0">
-									<div class="card-body" style="background-color: white;padding: 0;">
-										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
-										<img src="img/1.jpg" width="100%">
-									</div>
-								</div>
-								<div class="card text-white" style="margin-top: 0.5rem; border: 0">
-									<div class="card-body" style="background-color: white;padding: 0;">
-										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+									<div class="col-lg-12 " style="padding-left: 20px">
+										<div class="card text-white" style="margin-top: 0.5rem; border: 0">
+											<div class="card-body" style="background-color: white;padding: 0;">
+												<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+												<img src="img/1.jpg" width="100%">
+											</div>
+										</div>
+										<div class="card text-white" style="margin-top: 0.5rem; border: 0">
+											<div class="card-body" style="background-color: white;padding: 0;">
+												<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
 
 												<img src="img/2.jpg" width="100%">								
-									</div>
-								</div>
-							</div>					
+											</div>
+										</div>
+									</div>					
 
 
 							<!-- <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
@@ -285,7 +290,7 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 
 						</div>
 
-					<!-- </div> -->
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>		
@@ -294,60 +299,60 @@ $('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the s
 		<!-- /Section: intro -->
 
 		<!-- Section: boxes -->
-   <section id="boxes" class="home-section paddingtop-80">
-	
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3 col-md-3">
-					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
-							
-							<i class="fa fa-check fa-3x circled bg-skin"></i>
-							<h4 class="h-bold">Make an appointment</h4>
-							<p>
-							Here you can make appointment with your doctor
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-md-3">
-					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
-							
-							<i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-							<h4 class="h-bold">Choose your package</h4>
-							<p>
-							You have an options to choose the packages which you want.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-md-3">
-					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
-							<i class="fa fa-user-md fa-3x circled bg-skin"></i>
-							<h4 class="h-bold">Help by specialist</h4>
-							<p>
-							Some guidence by our specialists
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-md-3">
-					
-							<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-								<div class="cta-btn">
-									<a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>	
-								</div>
+		<section id="boxes" class="home-section paddingtop-80">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-md-3">
+						<div class="wow fadeInUp" data-wow-delay="0.2s">
+							<div class="box text-center">
+
+								<i class="fa fa-check fa-3x circled bg-skin"></i>
+								<h4 class="h-bold">Make an appointment</h4>
+								<p>
+									Here you can make appointment with your doctor
+								</p>
 							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-md-3">
+						<div class="wow fadeInUp" data-wow-delay="0.2s">
+							<div class="box text-center">
+
+								<i class="fa fa-list-alt fa-3x circled bg-skin"></i>
+								<h4 class="h-bold">Choose your package</h4>
+								<p>
+									You have an options to choose the packages which you want.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-md-3">
+						<div class="wow fadeInUp" data-wow-delay="0.2s">
+							<div class="box text-center">
+								<i class="fa fa-user-md fa-3x circled bg-skin"></i>
+								<h4 class="h-bold">Help by specialist</h4>
+								<p>
+									Some guidence by our specialists
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-md-3">
+
+						<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+							<div class="cta-btn">
+								<a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>	
+							</div>
+						</div>
 						
-				</div> 
+					</div> 
+				</div>
 			</div>
-		</div>
 
-	</section>
+		</section>
 
-<!-- /Section: boxes -->
+		<!-- /Section: boxes -->
 
 <!--
 <section id="callaction" class="home-section paddingtop-40">	
