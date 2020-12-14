@@ -1,28 +1,26 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Medical Tourism</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Trust You Doctor </title>
+		
+		<!-- Favicons -->
+		<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="assets/css/style.css">
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
 	
-    <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
-	<link href="css/nivo-lightbox.css" rel="stylesheet" />
-	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-	<link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
-	<link href="css/animate.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-
-	<!-- boxed bg -->
-	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
-	<!-- template skin -->
-	<link id="t-colors" href="color/default.css" rel="stylesheet">
-
-	<!-- Smartsupp Live Chat script -->
-<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c3c4c4eb4e774bbe8b3b5fb97758292322596068b7ce48129a806ac71c1d403b.js"></script>
-
-</head>
+	</head>

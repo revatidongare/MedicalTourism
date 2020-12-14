@@ -1,896 +1,775 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html> 
+ <html lang="en">
 
-<?php include'includes/head.php';?>
-<script>
-	$('#myCarousel').on('slid.bs.carousel', function (e) {
-  $('#myCarousel').carousel('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
-})
+ <!-- doccure/  30 Nov 2019 04:11:34 GMT -->
+ <?php include 'includes/head.php';?>
+ <head>
+ 	<!-- <meta charset="utf-8"> -->
+ 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+ <body>
 
-$('#myCarousel').carousel('1') // Will start sliding to the slide 1 and returns to the caller
-$('#myCarousel').carousel('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
-</script>
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+ 	<!-- Main Wrapper -->
+ 	<div class="main-wrapper">
 
-	<div id="wrapper">
+ 		<!-- Header -->
+ 		<?php include 'includes/navbar.php';?>
+ 		<!-- /Header -->
 
-		<?php include'includes/navbar.php';?>
+ 		<!-- Home Banner -->
+ 		<section class="section section-search">
+ 			<div class="container-fluid">
+ 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+ 					<!-- Indicators -->
+ 					<ol class="carousel-indicators">
+ 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+ 						<li data-target="#myCarousel" data-slide-to="1"></li>
+ 						<li data-target="#myCarousel" data-slide-to="2"></li>
+ 					</ol>
+
+ 					<!-- Wrapper for slides -->
+ 					<div class="carousel-inner">
+ 						<div class="item active">
+ 							<img src="assets/img/doctors/doctor-01.jpg" alt="Los Angeles" style="width:1600px; height: 450px;">
+ 						</div>
+
+ 						<div class="item">
+ 							<img src="assets/img/doctors/doctor-01.jpg" alt="Chicago" style="width:1600px; height: 450px;">
+ 						</div>
+
+ 						<div class="item">
+ 							<img src="assets/img/doctors/doctor-01.jpg" alt="New york" style="width:1600px; height: 450px;">
+ 						</div>
+ 					</div>
+
+ 					<style>
+ 						@media only screen (max-width: 768px){
+ 							.carousel-caption {
+ 								position: initial;
+ 								right: 15%;
+ 								bottom: 20px;
+ 								left: 15%;
+ 								z-index: 10;
+ 								padding-top: 20px;
+ 								padding-bottom: 20px;
+ 								color: #fff;
+ 								text-align: center;
+ 								text-shadow: 0 1px 2px rgba(0,0,0,.6);
+ 							}
+ 						}
+ 						</style>
+ 						<div class="carousel-caption">
+ 							<div class="banner-wrapper">
+ 								<div class="banner-header text-center">
+ 									<h1>Search Doctor, Make an Appointment</h1>
+ 									<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
+ 								</div>
+
+ 								<!-- Search -->
+ 								<div class="search-box">
+ 									<form action="back.php">
+ 										<div class="form-group search-location">
+ 											<input type="text" class="form-control" placeholder="Search Location">
+ 											<span class="form-text">Based on your Location</span>
+ 										</div>
+ 										<div class="form-group search-info">
+ 											<input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc">
+ 											<span class="form-text">Ex : Dental or Sugar Check up etc</span>
+ 										</div>
+ 										<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+ 									</form>
+ 								</div>
+ 								<!-- /Search -->
+
+ 							</div>
+ 						</div>
+ 						<!-- Left and right controls -->
+ 						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+ 							<span class="glyphicon glyphicon-chevron-left"></span>
+ 							<span class="sr-only">Previous</span>
+ 						</a>
+ 						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+ 							<span class="glyphicon glyphicon-chevron-right"></span>
+ 							<span class="sr-only">Next</span>
+ 						</a>
 
 
-		<!-- Section: intro -->
-		<section id="intro" class="intro">
-			<div class="intro-content">
-				<div class="container" style="max-width: 90%;">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-						<div class="row">
-							<div class="col-lg-12 " style="padding-left: 20px">
-								<div class="card text-white" style="height:17rem; margin-top: 0.5rem; border: 0">
-									<div class="card-body" style="background-color: white;padding: 0;">
-										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+ 					</div>
+ 				</div>
 
+ 			</section>
+ 			<!-- /Home Banner -->
+
+ 			<!-- Popular Section -->
+ 			<section class="section section-doctor">
+ 				<div class="container-fluid">
+ 					<div class="row">
+						<!-- <div class="col-lg-4">
+							<div class="section-header ">
+								<h2>Book Our Doctor</h2>
+								<p>Lorem Ipsum is simply dummy text </p>
+							</div>
+							<div class="about-content">
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
+								<a href="javascript:;">Read More..</a>
+							</div>
+						</div> -->
+						<div class="col-lg-12">
+							<div class="doctor-slider slider">
+
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
 										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/FR8iMC8z74Q?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
 											<style >
 												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
 													display: block;
 												}
 											</style>
-										</iframe>										
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Ruby Perrin</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MDS - Periodontology and Oral Implantology, BDS</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<span class="d-inline-block average-rating">(17)</span>
+										</div> -->
+										<!-- <ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Florida, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $300 - $1000 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul> -->
+										<!-- <div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
 									</div>
 								</div>
-								<div class="card text-white" style="height:17rem; margin-top: 0.5rem; border: 0">
-									<div class="card-body" style="background-color: white;padding: 0;">
-										<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
+								<!-- /Doctor Widget -->
 
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
 										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
 											<style >
 												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
 													display: block;
 												}
 											</style>
-										</iframe>										
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Darren Elder</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(35)</span>
+										</div> -->
+										<!-- <ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Newyork, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $50 - $300 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul> -->
+										<!-- <div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
 									</div>
 								</div>
-							</div>					
+								<!-- /Doctor Widget -->
 
-
-							<!-- <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
-								<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="carousel-item active">
-											<img  src="img/1.jpg" width="100%" alt="First slide">
-										</div>
-										<div class="carousel-item">
-											<img src="img/2.jpg" width="100%" alt="Second slide">
-										</div>
-										<div class="carousel-item">
-											<img src="img/3.jpg" width="100%" alt="Third slide">
-										</div>
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/iwQzuuCRlBw?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen>
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
 									</div>
-								</div>
-							</div> -->	
-						</div>
-					</div>					
-					<!-- <div class="row"> -->
-						<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-							
-							<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-								<div class="form-wrapper">
-									<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-
-										<div class="panel panel-skin">
-											<div class="panel-heading" >
-												<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Find Doctor </h3>
-											</div>
-
-											<div class="panel-body">
-												<form role="form" class="lead" action="back.php">
-													<div class="row">
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-																<?php include'config.php';?>
-
-																<div class="form-group">
-																	<label for="exampleFormControlSelect1">Search Country</label>
-																	<select class="form-control" id="exampleFormControlSelect1" >
-																		<?php 
-																	$query="SELECT * FROM `country_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																	</select>
-
-
-																</div>
-
-															</div>
-														</div>
-
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search State</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<?php 
-																	$query="SELECT * FROM `state_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-
-															</div>
-														</div>
-
-
-
-
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search City</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<?php 
-																	$query="SELECT * FROM `city_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-															</div>
-
-														</div>
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search specialization</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<?php 
-																	$query="SELECT * FROM `speciality_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-
-															</div>
-														</div>
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search hospitals/clinics</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<?php 
-																	$query="SELECT * FROM `clinic_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-
-															</div>
-														</div>
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search doctor</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<option value="0">search</option>
-																	<?php 
-																	$query="SELECT * FROM `doctor`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-
-															</div>
-														</div>
-
-														
-														<div class="col-lg-6 col-sm-12 col-md-6">
-															<div class="form-group">
-
-																<label for="exampleFormControlSelect1">Search Laboratory</label>
-																<select class="form-control" id="exampleFormControlSelect1" >
-																	<?php 
-																	$query="SELECT * FROM `lab_master`";
-																	$stmt=$conn->prepare($query);
-																	$stmt->execute();
-																	$row=$stmt->fetch();
-																	?>
-																	<option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
-																</select>
-
-															</div>
-														</div>
-
-
-													</div>
-													<div class="row" align="center">
-														<div class ="col-lg-4"> </div>
-														<div class="col-lg-4">
-
-															<input type="text-center" value="Submit" class="btn btn-skin btn-block btn-lg">
-														</div>
-													</div>
-
-												</form>
-											</div>
-										</div>				
-
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
-
-								<div class="row">
-									<div class="col-lg-12 " style="padding-left: 20px">
-										<div class="card text-white" style="margin-top: 0.5rem; border: 0">
-											<div class="card-body" style="background-color: white;padding: 0;">
-												<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
-												<img src="img/1.jpg" width="100%">
-											</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Deborah Angel</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MBBS, MD - General Medicine, DNB - Cardiology</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(27)</span>
 										</div>
-										<div class="card text-white" style="margin-top: 0.5rem; border: 0">
-											<div class="card-body" style="background-color: white;padding: 0;">
-												<!--   <h3 style="color: #E84B3A;">Latest Videos</h3>-->
-
-												<img src="img/2.jpg" width="100%">								
-											</div>
-										</div>
-									</div>					
-
-
-							<!-- <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
-								<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="carousel-item active">
-											<img  src="img/1.jpg" width="100%" alt="First slide">
-										</div>
-										<div class="carousel-item">
-											<img src="img/2.jpg" width="100%" alt="Second slide">
-										</div>
-										<div class="carousel-item">
-											<img src="img/3.jpg" width="100%" alt="Third slide">
-										</div>
-									</div>
-								</div>
-							</div> -->	
-						</div>
-
-								<!-- <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">									
-									<h2 class="h-ultra">Trust You Doctor</h2>
-								</div>
-								<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-									<h4 class="h-light">Provide <b> <span class="color">best quality healthcare</span> </b>for you</h4>
-								</div>
-								<div class="well well-trans">
-									<div class="wow fadeInLeft" data-wow-delay="0.1s">
-
-										<ul class="lead-list">
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly<br>premium packages</strong><br /></span></li>
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br /></span></li>
-											<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br /></span></li>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Georgia, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $100 - $400 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
 										</ul>
-
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
 									</div>
-								</div> -->
+								</div>
+								<!-- /Doctor Widget -->
 
-
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Sofia Brient</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MBBS, MS - General Surgery, MCh - Urology</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(4)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Louisiana, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $150 - $250 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<!-- /Doctor Widget -->
+								
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/FR8iMC8z74Q?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Marvin Campbell</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MBBS, MD - Ophthalmology, DNB - Ophthalmology</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(66)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Michigan, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $50 - $700 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<!-- /Doctor Widget -->
+								
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Katharine Berthold</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(52)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Texas, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $100 - $500 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<!-- /Doctor Widget -->
+								
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/FR8iMC8z74Q?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Linda Tobin</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MBBS, MD - General Medicine, DM - Neurology</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(43)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Kansas, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $100 - $1000 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<!-- /Doctor Widget -->
+								
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+											<style >
+												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
+													display: block;
+												}
+											</style>
+										</iframe>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php">Paul Richard</a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality">MBBS, MD - Dermatology , Venereology & Lepros</p>
+										<!-- <div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(49)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> California, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $100 - $400 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div> -->
+									</div>
+								</div>
+								<!-- Doctor Widget -->
+								
 							</div>
-
 						</div>
-
-						<!-- </div> -->
 					</div>
 				</div>
-			</div>		
-		</section>
+			</section>
+			<!-- /Popular Section -->
 
-		<!-- /Section: intro -->
+			<!-- Clinic and Specialities -->
+			<section class="section section-specialities">
+				<div class="container-fluid">
+					<div class="section-header text-center">
+						<h2>Clinic and Specialities</h2>
+						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-9">
+							<!-- Slider -->
+							<div class="specialities-slider slider">
 
-		<!-- Section: boxes -->
-		<section id="boxes" class="home-section paddingtop-80">
-
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<div class="box text-center">
-
-								<i class="fa fa-check fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Make an appointment</h4>
-								<p>
-									Here you can make appointment with your doctor
-								</p>
+								<!-- Slider Item -->
+								<div class="speicality-item text-center">
+									<div class="speicality-img">
+										<img src="assets/img/specialities/specialities-01.png" class="img-fluid" alt="Speciality">
+										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+									</div>
+									<p>Urology</p>
+								</div>	
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="speicality-item text-center">
+									<div class="speicality-img">
+										<img src="assets/img/specialities/specialities-02.png" class="img-fluid" alt="Speciality">
+										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+									</div>
+									<p>Neurology</p>	
+								</div>							
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="speicality-item text-center">
+									<div class="speicality-img">
+										<img src="assets/img/specialities/specialities-03.png" class="img-fluid" alt="Speciality">
+										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+									</div>	
+									<p>Orthopedic</p>	
+								</div>							
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="speicality-item text-center">
+									<div class="speicality-img">
+										<img src="assets/img/specialities/specialities-04.png" class="img-fluid" alt="Speciality">
+										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+									</div>	
+									<p>Cardiologist</p>	
+								</div>							
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="speicality-item text-center">
+									<div class="speicality-img">
+										<img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">
+										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+									</div>	
+									<p>Dentist</p>
+								</div>							
+								<!-- /Slider Item -->
+								
 							</div>
+							<!-- /Slider -->
+							
 						</div>
 					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<div class="box text-center">
+				</div>   
+			</section>	 
+			<!-- Clinic and Specialities -->
 
-								<i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Choose your package</h4>
-								<p>
-									You have an options to choose the packages which you want.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-						<div class="wow fadeInUp" data-wow-delay="0.2s">
-							<div class="box text-center">
-								<i class="fa fa-user-md fa-3x circled bg-skin"></i>
-								<h4 class="h-bold">Help by specialist</h4>
-								<p>
-									Some guidence by our specialists
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3">
-
-						<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-							<div class="cta-btn">
-								<a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>	
-							</div>
-						</div>
-						
-					</div> 
-				</div>
-			</div>
-
-		</section>
-
-		<!-- /Section: boxes -->
-
-<!--
-<section id="callaction" class="home-section paddingtop-40">	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="callaction bg-gray">
+			<!-- Popular Section -->
+			<section class="section section-doctor">
+				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-8">
-							<div class="wow fadeInUp" data-wow-delay="0.1s">
-								<div class="cta-text">
-									<h3>In an emergency? Need help now?</h3>
-									<p>Lorem ipsum dolor sit amet consectetur adipiscing elit uisque interdum ante eget faucibus. </p>
-								</div>
+						<div class="col-lg-4">
+							<div class="section-header ">
+								<h2>Book Our Doctor</h2>
+								<!-- <p>Lorem Ipsum is simply dummy text </p> -->
+							</div>
+							<div class="about-content">
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
+								<a href="javascript:;">Read More..</a>
 							</div>
 						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>	
+						<div class="col-lg-8">
+							<div class="doctor-slider slider">
 
-
-<!-- Section: services -->
-<!--
-<section id="service" class="home-section nopadding paddingtop-60">
-
-	<div class="container">
-
-		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				<div class="wow fadeInUp" data-wow-delay="0.2s">
-					<img src="img/dummy/img-1.jpg" class="img-responsive" alt="" />
-				</div>
-			</div>
-			<div class="col-sm-3 col-md-3">
-				
-				<div class="wow fadeInRight" data-wow-delay="0.1s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-stethoscope fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Medical checkup</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="wow fadeInRight" data-wow-delay="0.2s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-wheelchair fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Nursing Services</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-						</div>
-					</div>
-				</div>
-				<div class="wow fadeInRight" data-wow-delay="0.3s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-plus-square fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Pharmacy</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-			<div class="col-sm-3 col-md-3">
-				
-				<div class="wow fadeInRight" data-wow-delay="0.1s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-h-square fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Gyn Care</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+								<?php $query = "SELECT * FROM `doctor` where `active` = 1 ";
+                             include 'config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  $id=0 ;
+                             foreach($result as $doctor){
+                              ?>
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										<a href="doctor-profile.php">
+											<img class="img-fluid" alt="User Image" src="assets/img/doctors/<?php echo $doctor['image']?>">
+										</a>
+										<a href="javascript:void(0)" class="fav-btn">
+											<i class="far fa-bookmark"></i>
+										</a>
+									</div>
+									<div class="pro-content">
+										<h3 class="title">
+											<a href="doctor-profile.php"><?php echo $doctor['name']?></a> 
+											<i class="fas fa-check-circle verified"></i>
+										</h3>
+										<p class="speciality"><?php echo $doctor['qualification']?> - <?php echo $doctor['sp_id']?></p>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<span class="d-inline-block average-rating">(17)</span>
+										</div>
+										<ul class="available-info">
+											<li>
+												<i class="fas fa-map-marker-alt"></i> Florida, USA
+											</li>
+											<li>
+												<i class="far fa-clock"></i> Available on Fri, 22 Mar
+											</li>
+											<li>
+												<i class="far fa-money-bill-alt"></i> $300 - $1000 
+												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+											</li>
+										</ul>
+										<div class="row row-sm">
+											<div class="col-6">
+												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+											</div>
+											<div class="col-6">
+												<a href="booking.php" class="btn book-btn">Book Now</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Doctor Widget -->
+							<?php }?>
+								
+							</div>
 						</div>
 					</div>
 				</div>
-				
-				<div class="wow fadeInRight" data-wow-delay="0.2s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-filter fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Neurology</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-						</div>
-					</div>
-				</div>
-				<div class="wow fadeInRight" data-wow-delay="0.3s">
-					<div class="service-box">
-						<div class="service-icon">
-							<span class="fa fa-user-md fa-3x"></span> 
-						</div>
-						<div class="service-desc">
-							<h5 class="h-light">Sleep Center</h5>
-							<p>Vestibulum tincidunt enim in pharetra malesuada.</p>
-						</div>
-					</div>
-				</div>
+			</section>
+			<!-- /Popular Section -->
 
-			</div>
+			<!-- Availabe Features -->
+			<section class="section section-features">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-5 features-img">
+							<img src="assets/img/features/feature.png" class="img-fluid" alt="Feature">
+						</div>
+						<div class="col-md-7">
+							<div class="section-header">	
+								<h2 class="mt-2">Available Features in Our Clinic</h2>
+								<!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p> -->
+							</div>	
+							<div class="features-slider slider">
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
+									<p>Patient Ward</p>
+								</div>
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
+									<p>Test Room</p>
+								</div>
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
+									<p>ICU</p>
+								</div>
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
+									<p>Laboratory</p>
+								</div>
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
+									<p>Operation</p>
+								</div>
+								<!-- /Slider Item -->
+								
+								<!-- Slider Item -->
+								<div class="feature-item text-center">
+									<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
+									<p>Medical</p>
+								</div>
+								<!-- /Slider Item -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>		
+			<!-- Availabe Features -->
 			
-		</div>		
-	</div>
-</section>
--->
-<!-- /Section: services -->
+			<!-- Footer -->
+			<?php include 'includes/footer.php';?>
+			<!-- /Footer -->
 
-
-
-<!-- Section: team -->
-
-<section id="doctor" class="home-section bg-gray paddingbot-60">
-	<div class="container marginbot-50">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<div class="wow fadeInDown" data-wow-delay="0.1s">
-					<div class="section-heading text-center">
-						<h2 class="h-bold">Doctors</h2>
-						<p>We provide best and specialist doctors</p>
-					</div>
-				</div>
-				<div class="divider-short"></div>
-			</div>
 		</div>
-	</div>
+		<!-- /Main Wrapper -->
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				
-				<div id="filters-container" class="cbp-l-filters-alignLeft">
-					<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (<div class="cbp-filter-counter"></div>)</div>
-					<div data-filter=".cardiologist" class="cbp-filter-item">Cardiologist (<div class="cbp-filter-counter"></div>)</div>
-					<div data-filter=".psychiatrist" class="cbp-filter-item">Psychiatrist(<div class="cbp-filter-counter"></div>)</div>
-					<div data-filter=".neurologist" class="cbp-filter-item">Neurologist (<div class="cbp-filter-counter"></div>)</div>
-				</div>
+		<!-- jQuery -->
+		
+		<?php include 'includes/script.php';?>
+	</body>
 
-				<div id="grid-container" class="cbp-l-grid-team">
-					<ul>
-						<li class="cbp-item psychiatrist">
-							<a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/3.png" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Ashok Alim Chandani</a>
-							<div class="cbp-l-grid-team-position">Psychiatrist</div>
-						</li>
-						<li class="cbp-item cardiologist">
-							<a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/2.jpeg" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Dr. Rajneesh Kapoor</a>
-							<div class="cbp-l-grid-team-position">Cardiologist</div>
-						</li>
-						<li class="cbp-item cardiologist">
-							<a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/1.jpg" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Dr. Tapan Ghose</a>
-							<div class="cbp-l-grid-team-position">Cardiologist</div>
-						</li>
-						<li class="cbp-item neurologist">
-							<a href="doctors/member4.html" class="cbp-caption cbp-singlePage">
-								<div class="cbp-caption-defaultWrap">
-									<img src="img/team/4.jpg" alt="" width="100%">
-								</div>
-								<div class="cbp-caption-activeWrap">
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cbp-l-caption-text">VIEW PROFILE</div>
-										</div>
-									</div>
-								</div>
-							</a>
-							<a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Dr Arun Garg</a>
-							<div class="cbp-l-grid-team-position">Neurologist</div>
-						</li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-</section>
-
-<!-- /Section: team -->
-
-
-
-<!-- Section: works -->
-<!--
-<section id="facilities" class="home-section paddingbot-60">
-	<div class="container marginbot-50">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<div class="wow fadeInDown" data-wow-delay="0.1s">
-					<div class="section-heading text-center">
-						<h2 class="h-bold">Our facilities</h2>
-						<p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
-					</div>
-				</div>
-				<div class="divider-short"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12" >
-				<div class="wow bounceInUp" data-wow-delay="0.2s">
-					<div id="owl-works" class="owl-carousel">
-						<div class="item"><a href="img/photo/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/1.jpg" class="img-responsive" alt="img"></a></div>
-						<div class="item"><a href="img/photo/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg"><img src="img/photo/2.jpg" class="img-responsive " alt="img"></a></div>
-						<div class="item"><a href="img/photo/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg"><img src="img/photo/3.jpg" class="img-responsive " alt="img"></a></div>
-						<div class="item"><a href="img/photo/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg"><img src="img/photo/4.jpg" class="img-responsive " alt="img"></a></div>
-						<div class="item"><a href="img/photo/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg"><img src="img/photo/5.jpg" class="img-responsive " alt="img"></a></div>
-						<div class="item"><a href="img/photo/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg"><img src="img/photo/6.jpg" class="img-responsive " alt="img"></a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
--->
-<!-- /Section: works -->
-
-
-<!-- Section: testimonial -->
-<section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
-
-	<div class="carousel-reviews broun-block">
-		<div class="container">
-			<div class="row">
-				<div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-
-					<div class="carousel-inner">
-						<div class="item active">
-							<div class="col-md-4 col-sm-6">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Emergency Contraception</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">					
-									<img src="img/testimonials/1.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Anna</a>
-									<span>Banglore</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 hidden-xs">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Orthopedic Surgery</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>This  is really flawless. Good for elderly people. Best part of this home delivery of medicine at discounted price.</p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">
-									<img src="img/testimonials/2.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Gisshen </a>
-									<span>Pondicherry</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Medical consultation</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span>  </span></div>
-									<p>I don’t usually rely on apps for health stuff, but this is  exceeded my expectations. Thanks, guys!</p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">
-									<img src="img/testimonials/3.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Smita</a>
-									<span>Delhi</span>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="col-md-4 col-sm-6">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Birth control pills</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>This  is really flawless. Good for elderly people. Best part of this home delivery of medicine at discounted price.</p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">
-									<img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Thanmay</a>
-									<span>Banglore</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 hidden-xs">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Radiology</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span>  </span></div>
-									<p>I don’t usually rely on apps for health stuff, but this is  exceeded my expectations. Thanks, guys!</p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">
-									<img src="img/testimonials/5.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Ella </a>
-									<span>Chennai</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-								<div class="block-text rel zmin">
-									<a title="" href="#">Cervical Lesions</a>
-									<div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span>  </span></div>
-									<p>I am glad that an  like this is created for the benefit of all. It would really be a game changer in healthcare ecosystem in India. </p>
-									<ins class="ab zmin sprite sprite-i-triangle block"></ins>
-								</div>
-								<div class="person-text rel text-light">
-									<img src="img/testimonials/6.jpg" alt="" class="person img-circle" />
-									<a title="" href="#">Suzanne </a>
-									<span>GOA</span>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-
-					<a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-					<a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- /Section: testimonial -->
-
-
-<!-- Section: pricing -->
-<!--	
-<section id="pricing" class="home-section bg-gray paddingbot-60">	
-	<div class="container marginbot-50">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-					<div class="section-heading text-center">
-						<h2 class="h-bold">Health packages</h2>
-						<p>Take charge of your health today with our specially designed health packages</p>
-					</div>
-				</div>
-				<div class="divider-short"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-sm-4 pricing-box">
-				<div class="wow bounceInUp" data-wow-delay="0.1s">
-					<div class="pricing-content general">
-						<h2>Basic Fit 1 Package</h2>
-						<h3>$33<sup>.99</sup> <span>/ one time</span></h3>
-						<ul>
-							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-							<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-							<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-						</ul>
-
-						<div class="price-bottom">
-							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-4 pricing-box featured-price">
-				<div class="wow bounceInUp" data-wow-delay="0.3s">
-					<div class="pricing-content featured">
-						<h2>Golden Glow Package</h2>
-						<h3>$65<sup>.99</sup> <span>/ one time</span></h3>
-						<ul>
-							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-							<li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
-							<li>Body Composition Analysis <i class="fa fa-check icon-success"></i></li>
-							<li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li>
-						</ul>
-
-						<div class="price-bottom">
-							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-4 pricing-box">
-				<div class="wow bounceInUp" data-wow-delay="0.2s">
-					<div class="pricing-content general last">
-						<h2>Basic Fit 2 Package</h2>
-						<h3>$47<sup>.99</sup> <span>/ one time</span></h3>
-						<ul>
-							<li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
-							<li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
-							<li>General Screening – Regular <i class="fa fa-check icon-success"></i></li>
-							<li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-						</ul>
-
-						<div class="price-bottom">
-							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>				
-
-	</div>
-</section>	 
-
--->
-<!-- /Section: pricing -->
-
-<section id="partner" class="home-section paddingbot-60">	
-	<div class="container marginbot-50">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<div class="wow lightSpeedIn" data-wow-delay="0.1s">
-					<div class="section-heading text-center">
-						<h2 class="h-bold">Our trusted Hospitals</h2>
-						<p>Take charge of your health today with our trusted hospitals</p>
-					</div>
-				</div>
-				<div class="divider-short"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-3">
-				<div class="partner">
-					<a href="#"><img src="img/dummy/partner-1.jpg" alt="" /></a>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<div class="partner">
-					<a href="#"><img src="img/dummy/partner-2.jpg" alt="" /></a>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<div class="partner">
-					<a href="#"><img src="img/dummy/partner-3.jpg" alt="" /></a>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<div class="partner">
-					<a href="#"><img src="img/dummy/partner-4.jpg" alt="" /></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>	
-
-<?php include'includes/footer.php';?>
-</div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-
-<!-- Core JavaScript Files -->
-<script src="js/jquery.min.js"></script>	 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/jquery.scrollTo.js"></script>
-<script src="js/jquery.appear.js"></script>
-<script src="js/stellar.js"></script>
-<script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/custom.js"></script>
-
-<div class="fsElement fsEmbed footer-translate" id="fsEl_25395" data-use-new="true" >
-
-
-	<div class="fsElementContent" >
-		<div id="google_translate_element"></div><script type="text/javascript">
-			function googleTranslateElementInit() {
-				new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-			}
-		</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<!-- Google Translate End -->
-
-	</div>
-
-
-</div>
-</body>
-
-</html>
+	<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
+	</html>
