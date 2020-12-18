@@ -46,7 +46,7 @@
 											</div> -->
 											
 											<div class="text-right">
-												<a class="forgot-link" href="login.php">No account Yet? </a>
+												<a class="forgot-link" href="register.php">No account Yet? </a>
 											</div>
 											<button class="btn btn-primary btn-block btn-lg login-btn" name="login" type="submit">Signin</button>
 											<div class="text-right">
