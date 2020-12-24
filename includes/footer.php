@@ -16,20 +16,20 @@
 										<div class="social-icon">
 											<ul>
 												<li>
-													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+													<a href="https://www.facebook.com/trustyoudoctor.trustyoudoctor.1" target="_blank"><i class="fab fa-facebook-f"></i> </a>
 												</li>
-												<li>
+												<!-- <li>
 													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
-												</li>
-												<li>
+												</li> -->
+												<!-- <li>
 													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-												</li>
+												</li> -->
 												<li>
-													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+													<a href="https://www.instagram.com/trustyoudoctor/" target="_blank"><i class="fab fa-instagram"></i></a>
 												</li>
-												<li>
+												<!-- <li>
 													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-												</li>
+												</li> -->
 											</ul>
 										</div>
 									</div>
@@ -63,9 +63,9 @@
 									<ul>
 										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
 										<!-- <li><a href="login.php"><i class="fas fa-angle-double-right"></i> Chat</a></li> -->
-										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Login</a></li>
+										<li><a href="doctor/doctor-login.php"><i class="fas fa-angle-double-right"></i> Login</a></li>
 										<li><a href="doctor-register.php"><i class="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
+										<li><a href="doctor/doctor-login.php"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->

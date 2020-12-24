@@ -1,9 +1,9 @@
 <?php
 	$user='root';
 	$pass='';
-     $dbname='trustudoctor';
+     $dbname='trustyoudoctor';
 	
-$conn = new PDO('mysql:host=localhost;dbname=trustudoctor', $user, $pass);
+$conn = new PDO('mysql:host=localhost;dbname=trustyoudoctor', $user, $pass);
 	if (!$conn) {
 		die("Connection failed: " . $conn->connect_error);
 	}

@@ -113,30 +113,41 @@ include 'session.php';
 						</li>
 						<!-- User Menu -->
 						<?php                 
-                 if(isset($_SESSION['id'])){ ?>
+                 if(isset($_SESSION['id'])){
+                 	// echo $_SESSION['id'];
+                 	$id = $_SESSION['id'] ;
+							$query = "SELECT * FROM `doctor` where `id` = $id";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $doctor){
+                  ?>
                
 						<li class="nav-item dropdown has-arrow logged-item">
 							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 								<span class="user-img">
-									<img class="rounded-circle" src="../assets/img/patients/patient.jpg" width="31" alt="Ryan Taylor">
+									<img class="rounded-circle" src="../assets/img/doctors/<?php echo $doctor['image']?>" width="31" alt="<?php echo $doctor['image']?>">
 								</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<div class="user-header">
 									<div class="avatar avatar-sm">
-										<img src="../assets/img/patients/patient.jpg" alt="User Image" class="avatar-img rounded-circle">
+										<img src="../assets/img/doctors/<?php echo $doctor['image']?>" alt="User Image" class="avatar-img rounded-circle">
 									</div>
 									<div class="user-text">
-										<h6>Richard Wilson</h6>
-										<p class="text-muted mb-0">Patient</p>
+										<h6><?php echo $doctor['name']?></h6>
+										<p class="text-muted mb-0">Doctors</p>
 									</div>
 								</div>
-								<a class="dropdown-item" href="patient-dashboard.php">Dashboard</a>
+								<a class="dropdown-item" href="doctor-dashboard.php">Dashboard</a>
 								<a class="dropdown-item" href="profile-settings.php">Profile Settings</a>
 								<a class="dropdown-item" href="logout.php">Logout</a>
 							</div>
 						</li>
-						<?php }?>
+						<?php }}?>
 						<!-- /User Menu -->
 					</ul>
 				</nav>
