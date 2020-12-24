@@ -1,3 +1,6 @@
+<?php 
+include 'session.php'; 
+?>
 <header class="header">
 				<nav class="navbar navbar-expand-lg header-nav">
 					<div class="navbar-header">
@@ -109,19 +112,32 @@
 							</div>
 						</li>
 						<!-- User Menu -->
+						<?php                 
+                 if(isset($_SESSION['id'])){
+                 	// echo $_SESSION['id'];
+                 	$id = $_SESSION['id'] ;
+							$query = "SELECT * FROM `patient_master` where `id` = $id";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $patient){
+                  ?>
 						<li class="nav-item dropdown has-arrow logged-item">
 							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 								<span class="user-img">
-									<img class="rounded-circle" src="../assets/img/patients/patient.jpg" width="31" alt="Ryan Taylor">
+									<img class="rounded-circle" src="../assets/img/patients/<?php echo $patient['image']?>" width="31" alt="Ryan Taylor">
 								</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<div class="user-header">
 									<div class="avatar avatar-sm">
-										<img src="../assets/img/patients/patient.jpg" alt="User Image" class="avatar-img rounded-circle">
+										<img src="../assets/img/patients/<?php echo $patient['image']?>" alt="User Image" class="avatar-img rounded-circle">
 									</div>
 									<div class="user-text">
-										<h6>Richard Wilson</h6>
+										<h6><?php echo $patient['name']?></h6>
 										<p class="text-muted mb-0">Patient</p>
 									</div>
 								</div>
@@ -130,6 +146,7 @@
 								<a class="dropdown-item" href="logout.php">Logout</a>
 							</div>
 						</li>
+						<?php }}?>
 						<!-- /User Menu -->
 					</ul>
 				</nav>
