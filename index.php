@@ -41,7 +41,7 @@
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/doctors/Medical Tourism Photo 2.jpg" alt="New york" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/doctors/med.jpg " alt="New york" style="width:1600px; height: 600px;">
  						</div>
  					</div>
 

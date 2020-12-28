@@ -26,14 +26,14 @@
 								<a href="index.php">Home</a>
 							</li>
 							<li class="active">
-								<a href="medicaltourism.php">Medical Tourism</a>
+								<a href="medtourism.php">Medical Tourism</a>
 							</li>
 							<li class="active">
 								<a href="ayurvedic.php">Ayurvedic & Nachrotheraphy</a>
 							</li> 
 							
 							<li class="active">
-								<a href="internationalforum.php">International Forum</a>
+								<a href="international.php">International Forum</a>
 							</li> 
 							<li class="active">
 								<a href="domestictourism.php"> News & Events</a>
