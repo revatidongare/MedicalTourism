@@ -33,15 +33,15 @@
  					<!-- Wrapper for slides -->
  					<div class="carousel-inner">
  						<div class="item active">
- 							<img src="assets/img/doctors/doctor-01.jpg" alt="Los Angeles" style="width:1600px; height: 450px;">
+ 							<img src="assets/img/doctors/Medical Tourism photo1.jpeg" alt="Los Angeles" style="width:1600px; height: 600px;">
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/doctors/doctor-01.jpg" alt="Chicago" style="width:1600px; height: 450px;">
+ 							<img src="assets/img/doctors/Medical Tourism Photo3.jpg" alt="Chicago" style="width:1600px; height: 600px;">
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/doctors/doctor-01.jpg" alt="New york" style="width:1600px; height: 450px;">
+ 							<img src="assets/img/doctors/Medical Tourism Photo 2.jpg" alt="New york" style="width:1600px; height: 600px;">
  						</div>
  					</div>
 
@@ -280,7 +280,7 @@
 								<!-- Doctor Widget -->
 								<div class="profile-widget">
 									<div class="doc-img">
-										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/6i6jqJeHQio?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
+										<iframe id="Nframe" width="100%" height="60%" src="https://www.youtube.com/embed/JDD1-8xdCs0?rel=0&amp;autoplay=1&mute=1" frameborder="0" allowfullscreen >
 											<style >
 												.ytp-unmute .ytp-popup .ytp-button .ytp-unmute-animated .ytp-unmute-shrink{
 													display: block;
