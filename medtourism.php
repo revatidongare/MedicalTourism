@@ -35,17 +35,17 @@
  					<!-- Wrapper for slides -->
  					<div class="carousel-inner">
  						<div class="item active">
- 							<img src="assets/img/internationalforum/Medical Tourism Photo10 .jpg" alt="Los Angeles" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/internationalforum/Medical Tourism Photo10 .jpg" alt="Los Angeles" style="width:1600px; height: 500px;">
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/internationalforum/Medical Tourism 15 (2).png" alt="Chicago" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/internationalforum/Medical Tourism 15 (2).png" alt="Chicago" style="width:1600px; height: 500px;">
  						</div>
  						<div class="item">
- 							<img src="assets/img//internationalforum/Medical Tourism 15 (3).png" alt="New york" style="width:1600px; height: 600px;">
+ 							<img src="assets/img//internationalforum/Medical Tourism 15 (3).png" alt="New york" style="width:1600px; height: 500px;">
  						</div>
  						<div class="item">
- 							<img src="assets/img/internationalforum/MEDICAL TOURISM 8.jpg" alt="Chicago" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/internationalforum/MEDICAL TOURISM 8.jpg" alt="Chicago" style="width:1600px; height: 500px;">
  						</div>
  						
  					</div>
@@ -108,6 +108,81 @@
  			</section>
  			<!-- /Home Banner -->
 
+
+ 				<section class="section section-doctor">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="section-header ">
+								<h2>Medical Tourism</h2>
+								<!-- <p>Lorem Ipsum is simply dummy text </p> -->
+							</div>
+							<div class="about-content">
+								<p>Medical tourism is not a recent phenomenon.</p>
+								<p>From the time of the Sumerians (circa 4000 BC), who constructed the earliest known health complexes that were built around hot springs, to the 18th and 19th centuries when Europeans and Americans travelled to remote areas with health retreats to find cures for tuberculosis, quality healthcare – wherever it could be found — has been a common pursuit. </p>	
+								<p>Fast-forward to 1997, when the Asian economic crisis and the collapse of Asian currencies prompted government officials in these nations to market premiere destinations for international healthcare, at a fraction of what Western countries could offer.</p>				
+								<a href="javascript:;">Read More..</a>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="doctor-slider slider">
+
+								
+								<!-- Doctor Widget -->
+								<div class="profile-widget">
+									<div class="doc-img">
+										
+											<img class="img-fluid" alt="User Image" src="assets/img/internationalforum/Medical Tourism 15 (11).png">
+										
+										
+									</div>
+									
+								</div>
+								<div class="profile-widget">
+									<div class="doc-img">
+										
+											<img class="img-fluid" alt="User Image" src="assets/img/internationalforum/Webp.net-resizeimage (4).jpg">
+										
+										
+									</div>
+									
+								</div>
+								<div class="profile-widget">
+									<div class="doc-img">
+										
+											<img class="img-fluid" alt="User Image" src="assets/img/internationalforum/Webp.net-resizeimage (7).png">
+										
+										
+									</div>
+									
+								</div>
+								<div class="profile-widget">
+									<div class="doc-img">
+										
+											<img class="img-fluid" alt="User Image" src="assets/img/internationalforum/Webp.net-resizeimage (8).png">
+										
+										
+									</div>
+									
+								</div>
+								<div class="profile-widget">
+									<div class="doc-img">
+										
+											<img class="img-fluid" alt="User Image" src="assets/img/internationalforum/Webp.net-resizeimage (10).png">
+										
+										
+									</div>
+									
+								</div>
+								<!-- /Doctor Widget -->
+							
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /Popular Section -->
 
 
 

@@ -33,15 +33,15 @@
  					<!-- Wrapper for slides -->
  					<div class="carousel-inner">
  						<div class="item active">
- 							<img src="assets/img/doctors/Medical Tourism photo1.jpeg" alt="Los Angeles" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/doctors/Medical Tourism photo1.jpeg" alt="Los Angeles" style="width:1600px; height: 500px;">
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/doctors/Medical Tourism Photo3.jpg" alt="Chicago" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/doctors/Medical Tourism Photo3.jpg" alt="Chicago" style="width:1600px; height: 500px;">
  						</div>
 
  						<div class="item">
- 							<img src="assets/img/doctors/med.jpg " alt="New york" style="width:1600px; height: 600px;">
+ 							<img src="assets/img/doctors/med.jpg " alt="New york" style="width:1600px; height: 500px;">
  						</div>
  					</div>
 
@@ -668,13 +668,13 @@
 										</div>
 										<ul class="available-info">
 											<li>
-												<i class="fas fa-map-marker-alt"></i> Florida, USA
+												<i class="fas fa-map-marker-alt"></i> Mumbai,India
 											</li>
 											<li>
 												<i class="far fa-clock"></i> Available on Fri, 22 Mar
 											</li>
 											<li>
-												<i class="far fa-money-bill-alt"></i> $300 - $1000 
+												<i class="far fa-money-bill-alt"></i> Rs.300 - Rs.1000 
 												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
 											</li>
 										</ul>
