@@ -23,7 +23,7 @@
 								<li class="breadcrumb-item active" aria-current="page">Search</li>
 							</ol>
 						</nav>
-						<h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
+						<!-- <h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2> -->
 					</div>
 					<!-- <div class="col-md-4 col-12 d-md-block d-none">
 						<div class="sort-by">
@@ -125,7 +125,7 @@
 							
 						</div>
 						
-						<div class="col-lg-12 col-md-12 col-lg-8 col-xl-9">
+						<div class="col-lg-12 col-md-12 col-lg-8 col-xl-12">
 
 							<!-- Doctor Widget -->
 							<?php 
@@ -210,7 +210,12 @@
 											</div>
 										</div>
 									</div>
-								<?php } }?>
+								<?php } }
+								else{ ?>
+									<h2>
+										Sorry, No Matches Found
+									</h2>
+								<?php }?>
 								<!-- /Doctor Widget -->
 
 

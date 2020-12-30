@@ -61,7 +61,7 @@
  							}
  						}
  						</style>
- 						<div class="carousel-caption">
+ 						<div class="carousel-caption" style="background-color: #000;    opacity: 0.9;">
  							<div class="banner-wrapper">
  								<div class="banner-header text-center">
  									<h1>Search Doctor, Make an Appointment</h1>
