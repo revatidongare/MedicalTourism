@@ -1,58 +1,58 @@
 <!DOCTYPE html> 
 <html lang="en">
-	
+
 <!-- doccure/search.php  30 Nov 2019 04:12:16 GMT -->
 <?php include 'includes/head.php';?>
-	<body>
+<body>
 
-		<!-- Main Wrapper -->
-		<div class="main-wrapper">
+	<!-- Main Wrapper -->
+	<div class="main-wrapper">
 		
-			<!-- Header -->
-			<?php include 'includes/navbar.php';?>
-			<!-- /Header -->
-			
-			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-8 col-12">
-							<nav aria-label="breadcrumb" class="page-breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index-2.php">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Search</li>
-								</ol>
-							</nav>
-							<h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
-						</div>
-						<div class="col-md-4 col-12 d-md-block d-none">
-							<div class="sort-by">
-								<span class="sort-title">Sort by</span>
-								<span class="sortby-fliter">
-									<select class="select">
-										<option>Select</option>
-										<option class="sorting">Rating</option>
-										<option class="sorting">Popular</option>
-										<option class="sorting">Latest</option>
-										<option class="sorting">Free</option>
-									</select>
-								</span>
-							</div>
-						</div>
+		<!-- Header -->
+		<?php include 'includes/navbar.php';?>
+		<!-- /Header -->
+
+		<!-- Breadcrumb -->
+		<div class="breadcrumb-bar">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-md-8 col-12">
+						<nav aria-label="breadcrumb" class="page-breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index-2.php">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Search</li>
+							</ol>
+						</nav>
+						<h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
 					</div>
+					<!-- <div class="col-md-4 col-12 d-md-block d-none">
+						<div class="sort-by">
+							<span class="sort-title">Sort by</span>
+							<span class="sortby-fliter">
+								<select class="select">
+									<option>Select</option>
+									<option class="sorting">Rating</option>
+									<option class="sorting">Popular</option>
+									<option class="sorting">Latest</option>
+									<option class="sorting">Free</option>
+								</select>
+							</span>
+						</div>
+					</div> -->
 				</div>
 			</div>
-			<!-- /Breadcrumb -->
-			
-			<!-- Page Content -->
-			<div class="content">
-				<div class="container-fluid">
+		</div>
+		<!-- /Breadcrumb -->
 
-					<div class="row">
-						<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+		<!-- Page Content -->
+		<div class="content">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
 						
-							<!-- Search Filter -->
-							<div class="card search-filter">
+						<!-- Search Filter -->
+							<!-- <div class="card search-filter">
 								<div class="card-header">
 									<h4 class="card-title mb-0">Search Filter</h4>
 								</div>
@@ -120,395 +120,119 @@
 										<button type="button" class="btn btn-block">Search</button>
 									</div>	
 								</div>
-							</div>
+							</div> -->
 							<!-- /Search Filter -->
 							
 						</div>
 						
-						<div class="col-md-12 col-lg-8 col-xl-9">
+						<div class="col-lg-12 col-md-12 col-lg-8 col-xl-9">
 
 							<!-- Doctor Widget -->
-							<div class="card">
-								<div class="card-body">
-									<div class="doctor-widget">
-										<div class="doc-info-left">
-											<div class="doctor-img">
-												<a href="doctor-profile.php">
-													<img src="../assets/img/doctors/doctor-thumb-01.jpg" class="img-fluid" alt="User Image">
-												</a>
-											</div>
-											<div class="doc-info-cont">
-												<h4 class="doc-name"><a href="doctor-profile.php">Dr. Ruby Perrin</a></h4>
-												<p class="doc-speciality">MDS - Periodontology and Oral Implantology, BDS</p>
-												<h5 class="doc-department"><img src="../assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</h5>
-												<div class="rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="d-inline-block average-rating">(17)</span>
+							<?php 
+							if(isset($_POST['search'])){
+								$doctor = $_POST['doctor'];
+								$location = $_POST['location'];
+								$query = "SELECT * FROM `doctor` WHERE `city` = '$location' OR `name`= '$doctor' OR `hospital` = '$doctor' AND `active` = 1 ";
+								include 'config.php';
+								$stmt=$conn->prepare($query);
+								$stmt->execute();
+								$result=$stmt->fetchAll();
+								$conn=null;
+								$id=0 ;
+								foreach($result as $doctor){
+									?>
+									<div class="card">
+										<div class="card-body">
+											<div class="doctor-widget">
+												<div class="doc-info-left">
+													<div class="doctor-img">
+														<a href="doctor-profile.php">
+															<img src="assets/img/doctors/<?php echo $doctor['image']?>" class="img-fluid" alt="User Image">
+														</a>
+													</div>
+													<div class="doc-info-cont">
+														<h4 class="doc-name"><a href="doctor-profile.php"><?php echo $doctor['name']?></a></h4>
+														<p class="doc-speciality"><?php echo $doctor['hospital']?> </p>
+														<h5 class="doc-department"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></h5>
+														<!-- <div class="rating">
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star filled"></i>
+															<i class="fas fa-star"></i>
+															<span class="d-inline-block average-rating">(17)</span>
+														</div> -->
+														<div class="clinic-details">
+															<p class="doc-location"><i class="fas fa-map-marker-alt"></i> <?php echo $doctor['address']?></p>
+															<!-- <ul class="clinic-gallery">
+																<li>
+																	<a href="assets/img/features/feature-01.jpg" data-fancybox="gallery">
+																		<img src="assets/img/features/feature-01.jpg" alt="Feature">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/img/features/feature-02.jpg" data-fancybox="gallery">
+																		<img  src="assets/img/features/feature-02.jpg" alt="Feature">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/img/features/feature-03.jpg" data-fancybox="gallery">
+																		<img src="assets/img/features/feature-03.jpg" alt="Feature">
+																	</a>
+																</li>
+																<li>
+																	<a href="assets/img/features/feature-04.jpg" data-fancybox="gallery">
+																		<img src="assets/img/features/feature-04.jpg" alt="Feature">
+																	</a>
+																</li>
+															</ul> -->
+														</div>
+														<div class="clinic-services">
+															<span>Dental Fillings</span>
+															<span> Whitneing</span>
+														</div>
+													</div>
 												</div>
-												<div class="clinic-details">
-													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Florida, USA</p>
-													<ul class="clinic-gallery">
-														<li>
-															<a href="../assets/img/features/feature-01.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-01.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-02.jpg" data-fancybox="gallery">
-																<img  src="../assets/img/features/feature-02.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-03.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-03.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-04.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-04.jpg" alt="Feature">
-															</a>
-														</li>
-													</ul>
+												<div class="doc-info-right">
+													<div class="clini-infos">
+														<ul>
+															<li><i class="far fa-thumbs-up"></i> 98%</li>
+															<li><i class="far fa-comment"></i> <?php echo $doctor['experience']?></li>
+															<li><i class="fas fa-map-marker-alt"></i> <?php echo $doctor['city']?></li>
+															<li><i class="far fa-money-bill-alt"></i> <?php echo $doctor['fees']?> <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+														</ul>
+													</div>
+													<div class="clinic-booking">
+														<!-- <a class="view-pro-btn" href="doctor-profile.php">View Profile</a> -->
+														<a class="apt-btn" href="booking.php">Book Appointment</a>
+													</div>
 												</div>
-												<div class="clinic-services">
-													<span>Dental Fillings</span>
-													<span> Whitneing</span>
-												</div>
-											</div>
-										</div>
-										<div class="doc-info-right">
-											<div class="clini-infos">
-												<ul>
-													<li><i class="far fa-thumbs-up"></i> 98%</li>
-													<li><i class="far fa-comment"></i> 17 Feedback</li>
-													<li><i class="fas fa-map-marker-alt"></i> Florida, USA</li>
-													<li><i class="far fa-money-bill-alt"></i> $300 - $1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
-												</ul>
-											</div>
-											<div class="clinic-booking">
-												<a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-												<a class="apt-btn" href="booking.php">Book Appointment</a>
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<!-- /Doctor Widget -->
+								<?php } }?>
+								<!-- /Doctor Widget -->
 
-							<!-- Doctor Widget -->
-							<div class="card">
-								<div class="card-body">
-									<div class="doctor-widget">
-										<div class="doc-info-left">
-											<div class="doctor-img">
-												<a href="doctor-profile.php">
-													<img src="../assets/img/doctors/doctor-thumb-02.jpg" class="img-fluid" alt="User Image">
-												</a>
-											</div>
-											<div class="doc-info-cont">
-												<h4 class="doc-name"><a href="doctor-profile.php">Dr. Darren Elder</a></h4>
-												<p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-												<h5 class="doc-department"><img src="../assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</h5>
-												<div class="rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="d-inline-block average-rating">(35)</span>
-												</div>
-												<div class="clinic-details">
-													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Newyork, USA</p>
-													<ul class="clinic-gallery">
-														<li>
-															<a href="../assets/img/features/feature-01.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-01.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-02.jpg" data-fancybox="gallery">
-																<img  src="../assets/img/features/feature-02.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-03.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-03.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-04.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-04.jpg" alt="Feature">
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="clinic-services">
-													<span>Dental Fillings</span>
-													<span> Whitneing</span>
-												</div>
-											</div>
-										</div>
-										<div class="doc-info-right">
-											<div class="clini-infos">
-												<ul>
-													<li><i class="far fa-thumbs-up"></i> 100%</li>
-													<li><i class="far fa-comment"></i> 35 Feedback</li>
-													<li><i class="fas fa-map-marker-alt"></i> Newyork, USA</li>
-													<li><i class="far fa-money-bill-alt"></i> $50 - $300 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
-												</ul>
-											</div>
-											<div class="clinic-booking">
-												<a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-												<a class="apt-btn" href="booking.php">Book Appointment</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Doctor Widget -->
 
-							<!-- Doctor Widget -->
-							<div class="card">
-								<div class="card-body">
-									<div class="doctor-widget">
-										<div class="doc-info-left">
-											<div class="doctor-img">
-												<a href="doctor-profile.php">
-													<img src="../assets/img/doctors/doctor-thumb-03.jpg" class="img-fluid" alt="User Image">
-												</a>
-											</div>
-											<div class="doc-info-cont">
-												<h4 class="doc-name"><a href="doctor-profile.php">Dr. Deborah Angel</a></h4>
-												<p class="doc-speciality">MBBS, MD - General Medicine, DNB - Cardiology</p>
-												<p class="doc-department"><img src="../assets/img/specialities/specialities-04.png" class="img-fluid" alt="Speciality">Cardiology</p>
-												<div class="rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="d-inline-block average-rating">(27)</span>
-												</div>
-												<div class="clinic-details">
-													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Georgia, USA</p>
-													<ul class="clinic-gallery">
-														<li>
-															<a href="../assets/img/features/feature-01.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-01.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-02.jpg" data-fancybox="gallery">
-																<img  src="../assets/img/features/feature-02.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-03.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-03.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-04.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-04.jpg" alt="Feature">
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="clinic-services">
-													<span>Dental Fillings</span>
-													<span> Whitneing</span>
-												</div>
-											</div>
-										</div>
-										<div class="doc-info-right">
-											<div class="clini-infos">
-												<ul>
-													<li><i class="far fa-thumbs-up"></i> 99%</li>
-													<li><i class="far fa-comment"></i> 35 Feedback</li>
-													<li><i class="fas fa-map-marker-alt"></i> Newyork, USA</li>
-													<li><i class="far fa-money-bill-alt"></i> $100 - $400 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
-												</ul>
-											</div>
-											<div class="clinic-booking">
-												<a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-												<a class="apt-btn" href="booking.php">Book Appointment</a>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
-							<!-- /Doctor Widget -->
-
-							<!-- Doctor Widget -->
-							<div class="card">
-								<div class="card-body">
-									<div class="doctor-widget">
-										<div class="doc-info-left">
-											<div class="doctor-img">
-												<a href="doctor-profile.php">
-													<img src="../assets/img/doctors/doctor-thumb-04.jpg" class="img-fluid" alt="User Image">
-												</a>
-											</div>
-											<div class="doc-info-cont">
-												<h4 class="doc-name"><a href="doctor-profile.php">Dr. Sofia Brient</a></h4>
-												<p class="doc-speciality">MBBS, MS - General Surgery, MCh - Urology</p>
-												<p class="doc-department"><img src="../assets/img/specialities/specialities-01.png" class="img-fluid" alt="Speciality">Urology</p>
-												<div class="rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="d-inline-block average-rating">(4)</span>
-												</div>
-												<div class="clinic-details">
-													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Louisiana, USA</p>
-													<ul class="clinic-gallery">
-														<li>
-															<a href="../assets/img/features/feature-01.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-01.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-02.jpg" data-fancybox="gallery">
-																<img  src="../assets/img/features/feature-02.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-03.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-03.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-04.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-04.jpg" alt="Feature">
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="clinic-services">
-													<span>Dental Fillings</span>
-													<span> Whitneing</span>
-												</div>
-											</div>
-										</div>
-										<div class="doc-info-right">
-											<div class="clini-infos">
-												<ul>
-													<li><i class="far fa-thumbs-up"></i> 97%</li>
-													<li><i class="far fa-comment"></i> 4 Feedback</li>
-													<li><i class="fas fa-map-marker-alt"></i> Newyork, USA</li>
-													<li><i class="far fa-money-bill-alt"></i> $150 - $250 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
-												</ul>
-											</div>
-											<div class="clinic-booking">
-												<a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-												<a class="apt-btn" href="booking.php">Book Appointment</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Doctor Widget -->
-
-							<!-- Doctor Widget -->
-							<div class="card">
-								<div class="card-body">
-									<div class="doctor-widget">
-										<div class="doc-info-left">
-											<div class="doctor-img">
-												<a href="doctor-profile.php">
-													<img src="../assets/img/doctors/doctor-thumb-06.jpg" class="img-fluid" alt="User Image">
-												</a>
-											</div>
-											<div class="doc-info-cont">
-												<h4 class="doc-name"><a href="doctor-profile.php">Dr. Katharine Berthold</a></h4>
-												<p class="doc-speciality">MS - Orthopaedics, MBBS, M.Ch - Orthopaedics</p>
-												<p class="doc-department"><img src="../assets/img/specialities/specialities-03.png" class="img-fluid" alt="Speciality">Orthopaedics</p>
-												<div class="rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="d-inline-block average-rating">(52)</span>
-												</div>
-												<div class="clinic-details">
-													<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Texas, USA</p>
-													<ul class="clinic-gallery">
-														<li>
-															<a href="../assets/img/features/feature-01.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-01.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-02.jpg" data-fancybox="gallery">
-																<img  src="../assets/img/features/feature-02.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-03.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-03.jpg" alt="Feature">
-															</a>
-														</li>
-														<li>
-															<a href="../assets/img/features/feature-04.jpg" data-fancybox="gallery">
-																<img src="../assets/img/features/feature-04.jpg" alt="Feature">
-															</a>
-														</li>
-													</ul>
-												</div>
-												<div class="clinic-services">
-													<span>Dental Fillings</span>
-													<span> Whitneing</span>
-												</div>
-											</div>
-										</div>
-										<div class="doc-info-right">
-											<div class="clini-infos">
-												<ul>
-													<li><i class="far fa-thumbs-up"></i> 100%</li>
-													<li><i class="far fa-comment"></i> 52 Feedback</li>
-													<li><i class="fas fa-map-marker-alt"></i> Texas, USA</li>
-													<li><i class="far fa-money-bill-alt"></i> $100 - $500 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i></li>
-												</ul>
-											</div>
-											<div class="clinic-booking">
-												<a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-												<a class="apt-btn" href="booking.php">Book Appointment</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Doctor Widget -->
-
-							<div class="load-more text-center">
-								<a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>	
-							</div>	
 						</div>
+
 					</div>
 
-				</div>
+				</div>		
+				<!-- /Page Content -->
 
-			</div>		
-			<!-- /Page Content -->
-   
-			<!-- Footer -->
-			<?php include 'includes/footer.php';?>
-			<!-- /Footer -->
+				<!-- Footer -->
+				<?php include 'includes/footer.php';?>
+				<!-- /Footer -->
 
-		</div>
-		<!-- /Main Wrapper -->
-	  
-		<!-- jQuery -->
-		<?php include 'includes/script.php';?>
-		
-	</body>
+			</div>
+			<!-- /Main Wrapper -->
 
-<!-- doccure/search.php  30 Nov 2019 04:12:16 GMT -->
-</html>
+			<!-- jQuery -->
+			<?php include 'includes/script.php';?>
+
+		</body>
+
+		<!-- doccure/search.php  30 Nov 2019 04:12:16 GMT -->
+		</html>

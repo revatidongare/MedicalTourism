@@ -70,16 +70,16 @@
 
  								<!-- Search -->
  								<div class="search-box">
- 									<form action="back.php">
+ 									<form action="search.php" method="post">
  										<div class="form-group search-location">
- 											<input type="text" class="form-control" placeholder="Search Location">
+ 											<input type="text" name="location" class="form-control" placeholder="Search Location">
  											<span class="form-text">Based on your Location</span>
  										</div>
  										<div class="form-group search-info">
- 											<input type="text" class="form-control" placeholder="Search Doctors, Clinics, Hospitals, Diseases Etc">
+ 											<input type="text" name="doctor" class="form-control" placeholder="Search Doctors, Clinics / Hospitals, Specialities / Diseases Etc">
  											<span class="form-text">Ex : Dental or Sugar Check up etc</span>
  										</div>
- 										<button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+ 										<button type="submit" name="search" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
  									</form>
  								</div>
  								<!-- /Search -->
