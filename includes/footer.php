@@ -44,7 +44,7 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Patients</h2>
 									<ul>
-										<li><a href="search.php"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
+										<li><a href="index.php"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
 										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Login</a></li>
 										<li><a href="register.php"><i class="fas fa-angle-double-right"></i> Register</a></li>
 										<!-- <li><a href="booking.php"><i class="fas fa-angle-double-right"></i> Booking</a></li> -->
@@ -86,11 +86,11 @@
 											<i class="fas fa-phone-alt"></i>
 											022 20-48601029<br>
 											<i class="fas fa-phone-alt"></i>
-											+91 932556756
+											<a href="tel:9325656756" style="color: white;">+91 9325656756</a>
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
-											contact@trustyoudoctor.com
+											<a href="mailto:contact@trustyoudoctor.com" style="color: white;">contact@trustyoudoctor.com</a>
 										</p>
 									</div>
 								</div>

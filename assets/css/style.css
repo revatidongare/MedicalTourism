@@ -1950,7 +1950,7 @@ button.bg-danger:hover {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1040;
+	/*z-index: 1040;*/
 }
 .menu-opened .main-menu-wrapper {
     transform: translateX(0);
@@ -2302,10 +2302,21 @@ html.menu-opened body {
     border-radius: 5px;
     padding-left: 35px;
 }
+@media screen and (max-width: 769px){
 .search-box .search-location {
     /*-ms-flex: 0 0 240px;*/
     -ms-flex: 0 0 150px;
     flex: 0 0 150px;
+    /*flex: 0 0 240px;*/
+    margin-right: 12px;
+    position: relative;
+    width: 240px;
+}
+}
+.search-box .search-location {
+    /*-ms-flex: 0 0 240px;*/
+    /*-ms-flex: 0 0 150px;
+    flex: 0 0 150px;*/
     /*flex: 0 0 240px;*/
     margin-right: 12px;
     position: relative;
@@ -6195,7 +6206,7 @@ html.menu-opened body {
 		font-size: 1rem;
 	}
 	.section-header h2 {
-		font-size: 1.875rem;
+		/*font-size: 1.875rem;*/
 	}
 	.section-header .sub-title {
 		font-size: 0.875rem;
@@ -6555,7 +6566,7 @@ html.menu-opened body {
 		right: 0px;
 	}
 	.section-header h2 {
-		font-size: 1.5rem;
+		/*font-size: 1.5rem;*/
 	}
 	.section-header .sub-title {
 		font-size: 0.875rem;

@@ -26,20 +26,21 @@ include 'session.php';
 						</div>
 						<ul class="main-nav">
 							<li class="active">
-								<a href="../index.php">Home</a>
+								<a href="index.php" style="font-family: Poppins;">Home</a>
+								<!-- <a href="../index.php" style="font-family: Poppins,sans-serif;">Home</a> -->
 							</li>
 							<li class="active">
-								<a href="medicaltourism.php">Medical Tourism</a>
+								<a href="medicaltourism.php" style="font-family: Poppins;">Medical Tourism</a>
 							</li>
 							<li class="active">
-								<a href="ayurvedic.php">Ayurvedic & Nachrotheraphy</a>
+								<a href="ayurvedic.php" style="font-family: Poppins;">Ayurvedic & Nachrotheraphy</a>
 							</li> 
 							
 							<li class="active">
-								<a href="internationalforum.php">International Forum</a>
+								<a href="internationalforum.php" style="font-family: Poppins;">International Forum</a>
 							</li> 
 							<li class="active">
-								<a href="domestictourism.php"> News & Events</a>
+								<a href="domestictourism.php" style="font-family: Poppins;"> News & Events</a>
 							</li>  
 
 							<!-- <li class="has-submenu">

@@ -1,5 +1,5 @@
 <header class="header">
-				<nav class="navbar navbar-expand-lg header-nav">
+				<nav class="navbar navbar-expand-lg header-nav" style="margin-bottom: 0">
 					<div class="navbar-header">
 						<a id="mobile_btn" href="javascript:void(0);">
 							<span class="bar-icon">
@@ -8,7 +8,7 @@
 								<span></span>
 							</span>
 						</a>
-						<a href="index.php" class="navbar-brand logo">
+						<a href="index.php" class="navbar-brand logo" style="padding: 0;">
 							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>

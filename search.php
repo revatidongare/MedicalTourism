@@ -132,28 +132,29 @@
 							if(isset($_POST['search'])){
 								$doctor = $_POST['doctor'];
 								$location = $_POST['location'];
-								$query = "SELECT * FROM `doctor` WHERE `city` = '$location' OR `name`= '$doctor' OR `hospital` = '$doctor' AND `active` = 1 ";
+								$query = "SELECT * FROM `doctor` WHERE `city` = '$location' AND `active` = 1 OR `name`= '$doctor' OR `hospital` = '$doctor' ";
 								include 'config.php';
 								$stmt=$conn->prepare($query);
 								$stmt->execute();
-								$result=$stmt->fetchAll();
-								$conn=null;
-								$id=0 ;
-								foreach($result as $doctor){
-									?>
-									<div class="card">
-										<div class="card-body">
-											<div class="doctor-widget">
-												<div class="doc-info-left">
-													<div class="doctor-img">
-														<a href="doctor-profile.php">
-															<img src="assets/img/doctors/<?php echo $doctor['image']?>" class="img-fluid" alt="User Image">
-														</a>
-													</div>
-													<div class="doc-info-cont">
-														<h4 class="doc-name"><a href="doctor-profile.php"><?php echo $doctor['name']?></a></h4>
-														<p class="doc-speciality"><?php echo $doctor['hospital']?> </p>
-														<h5 class="doc-department"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></h5>
+								if($stmt){
+									$result=$stmt->fetchAll();
+									$conn=null;
+									$id=0 ;
+									foreach($result as $doctor){
+										?>
+										<div class="card">
+											<div class="card-body">
+												<div class="doctor-widget">
+													<div class="doc-info-left">
+														<div class="doctor-img">
+															<a href="doctor-profile.php">
+																<img src="assets/img/doctors/<?php echo $doctor['image']?>" class="img-fluid" alt="User Image">
+															</a>
+														</div>
+														<div class="doc-info-cont">
+															<h4 class="doc-name"><a href="doctor-profile.php"><?php echo $doctor['name']?></a></h4>
+															<p class="doc-speciality"><?php echo $doctor['hospital']?> </p>
+															<h5 class="doc-department"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></h5>
 														<!-- <div class="rating">
 															<i class="fas fa-star filled"></i>
 															<i class="fas fa-star filled"></i>
@@ -204,12 +205,22 @@
 													</div>
 													<div class="clinic-booking">
 														<!-- <a class="view-pro-btn" href="doctor-profile.php">View Profile</a> -->
-														<a class="apt-btn" href="booking.php">Book Appointment</a>
+														<?php                 
+														if(isset($_SESSION['id'])){ ?>
+															<a class="apt-btn" href="booking.php">Book Appointment</a>
+														<?php  }else{?> 
+															<a class="apt-btn" href="login.php">Book Appointment</a>
+														<?php }?>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+								<?php } }
+								else{ ?> 
+									<h2>
+										Sorry, No Matches Found
+									</h2>
 								<?php } }
 								else{ ?>
 									<h2>

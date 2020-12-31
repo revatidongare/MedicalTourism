@@ -60,15 +60,12 @@
  								text-shadow: 0 1px 2px rgba(0,0,0,.6);
  							}
  						}
- 						</style>
- 						<div class="carousel-caption" style="background-color: #000;    opacity: 0.9;">
- 							<div class="banner-wrapper">
- 								<div class="banner-header text-center">
- 									<h1>Search Doctor, Make an Appointment</h1>
- 									<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
- 								</div>
-
- 								<!-- Search -->
+ 					</style>
+ 					<div class="carousel-caption" style="background-color: #000;    opacity: 0.8; z-index: auto;">
+ 						<div class="banner-wrapper">
+ 							<div class="banner-header text-center">
+ 								<h1>Search Doctor, Make an Appointment</h1>
+ 								<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
  								<div class="search-box">
  									<form action="search.php" method="post">
  										<div class="form-group search-location">
@@ -82,6 +79,22 @@
  										<button type="submit" name="search" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
  									</form>
  								</div>
+ 							</div>
+
+ 							<!-- Search -->
+ 								<!-- <div class="search-box">
+ 									<form action="search.php" method="post">
+ 										<div class="form-group search-location">
+ 											<input type="text" name="location" class="form-control" placeholder="Search Location">
+ 											<span class="form-text">Based on your Location</span>
+ 										</div>
+ 										<div class="form-group search-info">
+ 											<input type="text" name="doctor" class="form-control" placeholder="Search Doctors, Clinics / Hospitals, Specialities / Diseases Etc">
+ 											<span class="form-text">Ex : Dental or Sugar Check up etc</span>
+ 										</div>
+ 										<button type="submit" name="search" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+ 									</form>
+ 								</div> -->
  								<!-- /Search -->
 
  							</div>
@@ -549,7 +562,7 @@
 				<div class="container-fluid">
 					<div class="section-header text-center">
 						<h2>Clinic and Specialities</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<!-- <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-9">
@@ -619,38 +632,42 @@
 			<section class="section section-doctor">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4">
+						<!-- <div class="col-lg-4">
 							<div class="section-header ">
 								<h2>Book Our Doctor</h2>
-								<!-- <p>Lorem Ipsum is simply dummy text </p> -->
+								
 							</div>
 							<div class="about-content">
 								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
 								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
 								<a href="javascript:;">Read More..</a>
 							</div>
-						</div>
-						<div class="col-lg-8">
+						</div> -->
+						<div class="col-lg-12">
+							<div class="section-header text-center">
+								<h2> Our Doctors</h2>
+								
+							</div>
 							<div class="doctor-slider slider">
 
 								<?php $query = "SELECT * FROM `doctor` where `active` = 1 ";
-                             include 'config.php';
-                             $stmt=$conn->prepare($query);
-                             $stmt->execute();
-                             $result=$stmt->fetchAll();
-                             $conn=null;
-                                  $id=0 ;
-                             foreach($result as $doctor){
-                              ?>
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.php">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/<?php echo $doctor['image']?>">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
+								include 'config.php';
+								$stmt=$conn->prepare($query);
+								$stmt->execute();
+								$result=$stmt->fetchAll();
+								$conn=null;
+								$id=0 ;
+								foreach($result as $doctor){
+									?>
+									<!-- Doctor Widget -->
+									<div class="profile-widget">
+										<div class="doc-img">
+											<a href="doctor-profile.php">
+												<img class="img-fluid" alt="User Image" src="assets/img/doctors/<?php echo $doctor['image']?>">
+											</a>
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -658,14 +675,14 @@
 											<i class="fas fa-check-circle verified"></i>
 										</h3>
 										<p class="speciality"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></p>
-										<div class="rating">
+										<!-- <div class="rating">
 											<i class="fas fa-star filled"></i>
 											<i class="fas fa-star filled"></i>
 											<i class="fas fa-star filled"></i>
 											<i class="fas fa-star filled"></i>
 											<i class="fas fa-star filled"></i>
 											<span class="d-inline-block average-rating">(17)</span>
-										</div>
+										</div> -->
 										<ul class="available-info">
 											<li>
 												<i class="fas fa-map-marker-alt"></i> Mumbai,India
@@ -680,96 +697,106 @@
 										</ul>
 										<div class="row row-sm">
 											<div class="col-6">
-												<a href="doctor-profile.php" class="btn view-btn">View Profile</a>
+												<?php                 
+												if(isset($_SESSION['id'])){?>
+													<a href="patients/doctor-profile.php" class="btn view-btn">View Profile</a>
+												<?php }else{?>
+													<a href="login.php" class="btn view-btn">View Profile</a>
+												<?php }?>
 											</div>
 											<div class="col-6">
+												<?php                 
+												if(isset($_SESSION['id'])){?>
 												<a href="booking.php" class="btn book-btn">Book Now</a>
+												<?php } else{?>
+													<a href="login.php" class="btn book-btn">Book Now</a>
+												<?php }?>
 											</div>
 										</div>
 									</div>
 								</div>
 								<!-- /Doctor Widget -->
 							<?php }?>
-								
-							</div>
+
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- /Popular Section -->
+			</div>
+		</section>
+		<!-- /Popular Section -->
 
-			<!-- Availabe Features -->
-			<section class="section section-features">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-5 features-img">
-							<img src="assets/img/features/feature.png" class="img-fluid" alt="Feature">
-						</div>
-						<div class="col-md-7">
-							<div class="section-header">	
-								<h2 class="mt-2">Available Features in Our Clinic</h2>
-								<!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p> -->
-							</div>	
-							<div class="features-slider slider">
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
-									<p>Patient Ward</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
-									<p>Test Room</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
-									<p>ICU</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
-									<p>Laboratory</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
-									<p>Operation</p>
-								</div>
-								<!-- /Slider Item -->
-								
-								<!-- Slider Item -->
-								<div class="feature-item text-center">
-									<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
-									<p>Medical</p>
-								</div>
-								<!-- /Slider Item -->
+		<!-- Availabe Features -->
+		<section class="section section-features">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-5 features-img">
+						<img src="assets/img/features/feature.png" class="img-fluid" alt="Feature">
+					</div>
+					<div class="col-md-7">
+						<div class="section-header">	
+							<h2 class="mt-2">Available Features in Our Clinic</h2>
+							<!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p> -->
+						</div>	
+						<div class="features-slider slider">
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-01.jpg" class="img-fluid" alt="Feature">
+								<p>Patient Ward</p>
 							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-02.jpg" class="img-fluid" alt="Feature">
+								<p>Test Room</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-03.jpg" class="img-fluid" alt="Feature">
+								<p>ICU</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-04.jpg" class="img-fluid" alt="Feature">
+								<p>Laboratory</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-05.jpg" class="img-fluid" alt="Feature">
+								<p>Operation</p>
+							</div>
+							<!-- /Slider Item -->
+
+							<!-- Slider Item -->
+							<div class="feature-item text-center">
+								<img src="assets/img/features/feature-06.jpg" class="img-fluid" alt="Feature">
+								<p>Medical</p>
+							</div>
+							<!-- /Slider Item -->
 						</div>
 					</div>
 				</div>
-			</section>		
-			<!-- Availabe Features -->
-			
-			<!-- Footer -->
-			<?php include 'includes/footer.php';?>
-			<!-- /Footer -->
+			</div>
+		</section>		
+		<!-- Availabe Features -->
 
-		</div>
-		<!-- /Main Wrapper -->
+		<!-- Footer -->
+		<?php include 'includes/footer.php';?>
+		<!-- /Footer -->
 
-		<!-- jQuery -->
-		
-		<?php include 'includes/script.php';?>
-	</body>
+	</div>
+	<!-- /Main Wrapper -->
 
-	<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
-	</html>
+	<!-- jQuery -->
+
+	<?php include 'includes/script.php';?>
+</body>
+
+<!-- doccure/  30 Nov 2019 04:11:53 GMT -->
+</html>
