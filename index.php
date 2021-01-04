@@ -144,9 +144,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -196,9 +196,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -248,9 +248,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -300,9 +300,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -352,9 +352,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -404,9 +404,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -456,9 +456,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">
@@ -508,9 +508,9 @@
 												}
 											</style>
 										</iframe>
-										<a href="javascript:void(0)" class="fav-btn">
+										<!-- <a href="javascript:void(0)" class="fav-btn">
 											<i class="far fa-bookmark"></i>
-										</a>
+										</a> -->
 									</div>
 									<div class="pro-content">
 										<h3 class="title">

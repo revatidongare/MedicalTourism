@@ -1,3 +1,4 @@
+<!-- <?php //include 'patients/session.php';?> -->
 <!DOCTYPE html> 
 <html lang="en">
 
@@ -136,7 +137,7 @@
 								include 'config.php';
 								$stmt=$conn->prepare($query);
 								$stmt->execute();
-								if($stmt){
+								
 									$result=$stmt->fetchAll();
 									$conn=null;
 									$id=0 ;
@@ -188,16 +189,16 @@
 																</li>
 															</ul> -->
 														</div>
-														<div class="clinic-services">
+														<!-- <div class="clinic-services">
 															<span>Dental Fillings</span>
 															<span> Whitneing</span>
-														</div>
+														</div> -->
 													</div>
 												</div>
 												<div class="doc-info-right">
 													<div class="clini-infos">
 														<ul>
-															<li><i class="far fa-thumbs-up"></i> 98%</li>
+															<!-- <li><i class="far fa-thumbs-up"></i> 98%</li> -->
 															<li><i class="far fa-comment"></i> <?php echo $doctor['experience']?></li>
 															<li><i class="fas fa-map-marker-alt"></i> <?php echo $doctor['city']?></li>
 															<li><i class="far fa-money-bill-alt"></i> <?php echo $doctor['fees']?> <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
@@ -206,8 +207,10 @@
 													<div class="clinic-booking">
 														<!-- <a class="view-pro-btn" href="doctor-profile.php">View Profile</a> -->
 														<?php                 
-														if(isset($_SESSION['id'])){ ?>
-															<a class="apt-btn" href="booking.php">Book Appointment</a>
+														if(isset($_SESSION['id'])){
+														
+														 ?>
+															<a class="apt-btn" href="patients/booking.php">Book Appointment</a>
 														<?php  }else{?> 
 															<a class="apt-btn" href="login.php">Book Appointment</a>
 														<?php }?>
@@ -216,12 +219,7 @@
 											</div>
 										</div>
 									</div>
-								<?php } }
-								else{ ?> 
-									<h2>
-										Sorry, No Matches Found
-									</h2>
-								<?php } }
+								<?php } } 
 								else{ ?>
 									<h2>
 										Sorry, No Matches Found

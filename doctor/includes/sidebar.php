@@ -64,13 +64,13 @@
 													<span>Reviews</span>
 												</a>
 											</li>
-											<li>
+											<!-- <li>
 												<a href="chat-doctor.php">
 													<i class="fas fa-comments"></i>
 													<span>Message</span>
 													<small class="unread-msg">23</small>
 												</a>
-											</li>
+											</li> -->
 											<li>
 												<a href="doctor-profile-settings.php">
 													<i class="fas fa-user-cog"></i>

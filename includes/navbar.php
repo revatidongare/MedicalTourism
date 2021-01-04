@@ -1,3 +1,6 @@
+<?php 
+include 'patients/session.php'; 
+?>
 <header class="header">
 				<nav class="navbar navbar-expand-lg header-nav" style="margin-bottom: 0">
 					<div class="navbar-header">
@@ -108,9 +111,15 @@
 								<p class="contact-info-header"> +91 932556756</p>
 							</div>
 						</li>
-						<li class="nav-item">
+						<?php if(isset($_SESSION['id'])){ ?>
+							<li class="nav-item">
+							 <a class="nav-link header-login" href="logout.php">Logout </a>
+						</li>
+						<?php }else{?>
+							<li class="nav-item">
 							<a class="nav-link header-login" href="login.php">login / Signup </a>
 						</li>
+					<?php }?>
 					</ul>
 				</nav>
 			</header>

@@ -15,7 +15,7 @@ include 'session.php';
 							<img src="../assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>
-					<div class="main-menu-wrapper" style="z-index: 9;">
+					<!-- <div class="main-menu-wrapper" style="z-index: 9;">
 						<div class="menu-header">
 							<a href="../index.php" class="menu-logo">
 								<img src="../assets/img/logo.png" class="img-fluid" alt="Logo">
@@ -27,7 +27,7 @@ include 'session.php';
 						<ul class="main-nav">
 							<li class="active">
 								<a href="index.php" style="font-family: Poppins;">Home</a>
-								<!-- <a href="../index.php" style="font-family: Poppins,sans-serif;">Home</a> -->
+								<!-- <a href="../index.php" style="font-family: Poppins,sans-serif;">Home</a> --
 							</li>
 							<li class="active">
 								<a href="medicaltourism.php" style="font-family: Poppins;">Medical Tourism</a>
@@ -57,8 +57,8 @@ include 'session.php';
 									<li><a href="reviews.php">Reviews</a></li>
 									<li><a href="doctor-register.php">Doctor Register</a></li>
 								</ul>
-							</li> -->	
-							<!-- <li class="has-submenu">
+							</li> --
+							<li class="has-submenu">
 								<a href="#">Patients <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
 									<li><a href="search.php">Search Doctor</a></li>
@@ -72,7 +72,7 @@ include 'session.php';
 									<li><a href="profile-settings.php">Profile Settings</a></li>
 									<li><a href="change-password.php">Change Password</a></li>
 								</ul>
-							</li> -->	
+							</li>	
 							<!-- <li class="has-submenu">
 								<a href="#">Pages <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
@@ -99,9 +99,9 @@ include 'session.php';
 							</li> -->
 							<!-- <li class="login-link">
 								<a href="login.php">Login / Signup</a>
-							</li> -->
+							</li> --
 						</ul>		 
-					</div>		 
+					</div> -->		 
 					<ul class="nav header-navbar-rht" style="z-index: 9">
 						<li class="nav-item contact-item">
 							<div class="header-contact-img">
