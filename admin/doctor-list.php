@@ -47,9 +47,18 @@
 											<thead>
 												<tr>
 													<th>Doctor Name</th>
+													<th>Email</th>
+													<th>Contact_No</th>
+													<th>Fees</th>
+													<th>TimeSlot</th>
 													<th>Speciality</th>
-													<th>Member Since</th>
-													<th>Earned</th>
+													<th>Experience</th>
+													<th>Qualification</th>
+													<th>Hospital</th>
+													<th>Address</th>
+													<th>City</th>
+													<!-- <th>Country</th> -->
+																										
 													<th>Account Status</th>
 													
 												</tr>
@@ -72,11 +81,18 @@
 															<a href="profile.html"><?php echo $doctor['name']?></a>
 														</h2>
 													</td>
+													<td><?php echo $doctor['email']?></td>
+													<td><?php echo $doctor['contact_no']?></td>
+													<td><?php echo $doctor['fees']?></td>
+													<td><?php echo $doctor['timeslot']?></td>
 													<td><?php echo $doctor['specialities']?></td>
+													<td><?php echo $doctor['experience']?></td>
+													<td><?php echo $doctor['qualification']?></td>
+													<td><?php echo $doctor['hospital']?></td>
+													<td><?php echo $doctor['address']?></td>
+													<td><?php echo $doctor['city']?></td>
+													<!-- <td><?php echo $doctor['country']?></td>		 -->
 													
-													<td>14 Jan 2019 <br><small>02.59 AM</small></td>
-													
-													<td>$3100.00</td>
 													
 													<td>
 														<?php if( $doctor['active'] == 1 ) { ?>
@@ -305,6 +321,8 @@
 		<!-- Custom JS -->
 		<script  src="assets/js/script.js"></script>
 		
+		  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 <!-- Mirrored from dreamguys.co.in/demo/doccure/admin/doctor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
@@ -315,32 +333,123 @@
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Add Specialities</h5>
+							<h5 class="modal-title">Add Doctor</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
-							<form>
+							<form action="back.php" method="post" enctype="multipart/form-data">
 								<div class="row form-row">
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
-											<label>Specialities</label>
-											<input type="text" class="form-control">
+											<label>Name</label>
+											<input type="text" name="name" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Speciality</label>
+											<input type="text" name="specialities" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Hospital</label>
+											<input type="text" name="hospital" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Address</label>
+											<input type="text" name="address" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>City</label>
+											<input type="text" name="city" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Country</label>
+											<input type="text" name="country" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Experience</label>
+											<input type="text" name="experience" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Time Slot</label>
+											<input type="text" name="timeslot" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Fees</label>
+											<input type="text" name="fees" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Qualification</label>
+											<input type="text" name="qualification" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Email</label>
+											<input type="text" name="email" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Password</label>
+											<input type="text" name="password" class="form-control">
 										</div>
 									</div>
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Image</label>
-											<input type="file"  class="form-control">
+											<input type="file" name="image" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-sm-6">
+										<div class="form-group">
+											<label>Contact</label>
+											<input type="text" name="contact" class="form-control">
 										</div>
 									</div>
 									
 								</div>
-								<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+								<button type="submit" name="registerdoctor" class="btn btn-primary btn-block">Save Changes</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- /ADD Modal -->
+
+			<?php
+    if(isset($_GET['q'])) {            
+            if($_GET['q'] == 3){ ?>
+            <script> swal("Dotor added Successfully..", {
+  buttons: false,
+  timer: 1500,
+});</script>
+            <!--echo '<script> alert(" Successful login..")</script>';-->
+            <?php }   
+            if($_GET['q'] == 2){ ?>
+            <script>swal("Something Went Wrong...!!Please Try Again", {
+  buttons: false,
+  timer: 1500,
+});</script>
+            <!--echo '<script> alert(" Successfully Logout..")</script>';-->
+<?php }
+} ?>
+

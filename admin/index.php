@@ -65,7 +65,20 @@
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
 		
+		  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
 <!-- Mirrored from dreamguys.co.in/demo/doccure/admin/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:46 GMT -->
 </html>
+
+<?php
+	
+            if($_GET['p'] == 1234){ ?>
+            <script>swal("Successfully Logout..", {
+  buttons: false,
+  timer: 1500,
+});</script>
+            <!--echo '<script> alert(" Successfully Logout..")</script>';-->
+<?php }
+ ?>

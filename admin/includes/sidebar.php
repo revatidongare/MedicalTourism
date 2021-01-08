@@ -20,9 +20,9 @@
 							<li> 
 								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
 							</li>
-							<li> 
+							<!-- <li> 
 								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
-							</li>
+							</li> -->
 							<!-- <li> 
 								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
 							</li> -->
