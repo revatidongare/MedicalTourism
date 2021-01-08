@@ -2,6 +2,5 @@
 	session_start();
 	session_unset();
 	session_destroy();
-	header('location:login.php?p=1234');
-
+	header('location:index.php?p=1234');
 ?>

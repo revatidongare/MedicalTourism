@@ -6,39 +6,39 @@
 								<span>Main</span>
 							</li>
 							<li class="active"> 
-								<a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+								<a href="dashboard.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
 							<li> 
-								<a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li> 
-								<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
 							</li>
 							<li> 
-								<a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+								<a href="doctor-list.php"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
 							</li>
 							<li> 
-								<a href="patient-list.html"><i class="fe fe-user"></i> <span>Patients</span></a>
+								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
 							</li>
 							<li> 
 								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
 							</li>
-							<li> 
+							<!-- <li> 
 								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
-							</li>
-							<li> 
+							</li> -->
+							<!-- <li> 
 								<a href="settings.html"><i class="fe fe-vector"></i> <span>Settings</span></a>
-							</li>
-							<li class="submenu">
+							</li> -->
+							<!-- <li class="submenu">
 								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="invoice-report.html">Invoice Reports</a></li>
 								</ul>
-							</li>
-							<li class="menu-title"> 
+							</li> -->
+							<!-- <li class="menu-title"> 
 								<span>Pages</span>
-							</li>
-							<li> 
+							</li> -->
+							<!-- <li> 
 								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
 							</li>
 							<li class="submenu">
@@ -49,7 +49,7 @@
 									<li><a href="forgot-password.html"> Forgot Password </a></li>
 									<li><a href="lock-screen.html"> Lock Screen </a></li>
 								</ul>
-							</li>
+							</li> -->
 							<!-- <li class="submenu">
 								<a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -77,13 +77,13 @@
 									<li><a href="form-validation.html"> Form Validation </a></li>
 								</ul>
 							</li> -->
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fe fe-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<!-- <li><a href="tables-basic.html">Basic Tables </a></li> -->
+									<li><a href="tables-basic.html">Basic Tables </a></li>
 									<li><a href="data-tables.html">Data Table </a></li>
 								</ul>
-							</li>
+							</li> -->
 							<!-- <li class="submenu">
 								<a href="javascript:void(0);"><i class="fe fe-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">

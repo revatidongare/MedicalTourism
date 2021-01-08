@@ -18,7 +18,7 @@ $conn=null;
 		header('location: dashboard.php?login=1');
 	}
 	else{
-		header('location: login.php?q=1');
+		header('location: index.php?q=1');
 	}
 }
 
