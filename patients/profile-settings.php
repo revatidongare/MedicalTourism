@@ -54,7 +54,7 @@
                              foreach($result as $patient){
                               ?>
 									<!-- Profile Settings Form -->
-									<form>
+									<form action="back.php" method="post" enctype="multipart/form-data">
 										<div class="row form-row">
 											<div class="col-12 col-md-12">
 												<div class="form-group">
@@ -65,7 +65,7 @@
 														<div class="upload-img">
 															<div class="change-photo-btn">
 																<span><i class="fa fa-upload"></i> Upload Photo</span>
-																<input type="file" class="upload">
+																<input type="file" name="image" class="upload">
 															</div>
 															<small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
 														</div>
@@ -74,8 +74,8 @@
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
-													<label>First Name</label>
-													<input type="text" class="form-control" value="<?php echo $patient['name']?>">
+													<label> Name</label>
+													<input type="text" class="form-control" name="name" value="<?php echo $patient['name']?>">
 												</div>
 											</div>
 											<!-- <div class="col-12 col-md-6">
@@ -87,71 +87,71 @@
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Date of Birth</label>
-													<div class="cal-icon">
-														<input type="text" class="form-control datetimepicker" value="<?php echo $patient['dob']?>">
+													<div class="">
+														<input type="date" name="dob" class="form-control datetimepicker" value="<?php echo $patient['dob']?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Blood Group</label>
-													<select class="form-control select">
-														<option>A-</option>
-														<option>A+</option>
-														<option>B-</option>
-														<option>B+</option>
-														<option>AB-</option>
-														<option>AB+</option>
-														<option>O-</option>
-														<option>O+</option>
+													<select class="form-control select" name="bloodgroup">
+														<option value="A-">A-</option>
+														<option value="A+">A+</option>
+														<option value="B-">B-</option>
+														<option value="B+">B+</option>
+														<option value="AB-">AB-</option>
+														<option value="AB+">AB+</option>
+														<option value="O-">O-</option>
+														<option value="O+">O+</option>
 													</select>
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Email ID</label>
-													<input type="email" class="form-control" value="<?php echo $patient['email']?>">
+													<input type="email" name="email" class="form-control" value="<?php echo $patient['email']?>">
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Mobile</label>
-													<input type="text" value="<?php echo $patient['contact']?>" class="form-control">
+													<input type="text" name="contact" value="<?php echo $patient['contact']?>" class="form-control">
 												</div>
 											</div>
 											<div class="col-12">
 												<div class="form-group">
 												<label>Address</label>
-													<input type="text" class="form-control" value="<?php echo $patient['address']?>">
+													<input type="text" name="address" class="form-control" value="<?php echo $patient['address']?>">
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>City</label>
-													<input type="text" class="form-control" value="<?php echo $patient['city']?>">
+													<input type="text" name="city" class="form-control" value="<?php echo $patient['city']?>">
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>State</label>
-													<input type="text" class="form-control" value="<?php echo $patient['state']?>">
+													<input type="text" name="state" class="form-control" value="<?php echo $patient['state']?>">
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Zip Code</label>
-													<input type="text" class="form-control" value="<?php echo $patient['zipcode']?>">
+													<input type="text" name="zipcode" class="form-control" value="<?php echo $patient['zipcode']?>">
 												</div>
 											</div>
 											<div class="col-12 col-md-6">
 												<div class="form-group">
 													<label>Country</label>
-													<input type="text" class="form-control" value="<?php echo $patient['country']?>">
+													<input type="text" name="country" class="form-control" value="<?php echo $patient['country']?>">
 												</div>
 											</div>
 										</div>
 										<div class="submit-section">
-											<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+											<button type="submit" name="update_patient" class="btn btn-primary submit-btn">Save Changes</button>
 										</div>
 									</form>
 									<!-- /Profile Settings Form -->
