@@ -79,7 +79,7 @@ include '../config.php';
         
     }
 
-    // UPDATE SLIDER code...
+    // UPDATE code...
     if(isset($_POST['update_patient'])){
       include '../config.php';
     $name = $_POST['name'];
@@ -112,7 +112,7 @@ include '../config.php';
         }
     }else{
 
-      $query = "SELECT * FROM `slider` WHERE `slider_id` = '$slider_id' ";
+      $query = "SELECT * FROM `patient_master` WHERE `id` = '$id'";
                        
         $stmt=$conn->prepare($query);
         $stmt->execute();
@@ -161,7 +161,7 @@ include '../config.php';
           }
       }
 
-      $query = "UPDATE `slider` SET `name`= '$name',`email`= '$email',`contact`= '$contact',`dob`= '$dob',`bloodgroup`= '$bloodgroup',`address`= '$address',`city`='$city',`state`='$state',`zipcode`= '$zipcode',`country`= '$country',`image`='$img' WHERE `id` ='$id'";
+      $query = "UPDATE `patient_master` SET `name`= '$name',`email`= '$email',`contact`= '$contact',`dob`= '$dob',`bloodgroup`= '$bloodgroup',`address`= '$address',`city`='$city',`state`='$state',`zipcode`= '$zipcode',`country`= '$country',`image`='$img' WHERE `id` ='$id'";
   
          $stmt=$conn->prepare($query);
          $res=$stmt->execute();

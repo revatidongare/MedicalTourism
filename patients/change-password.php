@@ -37,7 +37,7 @@
 						
 						
 							<!-- Profile Sidebar -->
-							<?php include 'includes/sidebar.php'?>
+							<?php $status = 3; include 'includes/sidebar.php'?>
 							<!-- /Profile Sidebar -->
 							
 						

@@ -43,7 +43,7 @@
 												<label class="focus-label">E-mail</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="text" class="form-control floating" name="contact">
+												<input input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control floating" name="contact">
 												<label class="focus-label">Contact</label>
 											</div>
 											<!-- <div class="form-group form-focus">

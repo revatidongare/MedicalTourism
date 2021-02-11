@@ -28,19 +28,19 @@
 								<div class="dashboard-widget">
 									<nav class="dashboard-menu">
 										<ul>
-											<li>
+											<li class="<?php if($status == 1){ ?> active <?php } ?>">
 												<a href="doctor-dashboard.php">
 													<i class="fas fa-columns"></i>
 													<span>Dashboard</span>
 												</a>
 											</li>
-											<li class="active">
+											<li class="<?php if($status == 2){ ?> active <?php } ?>">
 												<a href="appointments.php">
 													<i class="fas fa-calendar-check"></i>
 													<span>Appointments</span>
 												</a>
 											</li>
-											<li>
+											<li class="<?php if($status == 3){ ?> active <?php } ?>">
 												<a href="my-patients.php">
 													<i class="fas fa-user-injured"></i>
 													<span>My Patients</span>
@@ -52,18 +52,18 @@
 													<span>Schedule Timings</span>
 												</a>
 											</li> -->
-											<li>
+											<li class="<?php if($status == 4){ ?> active <?php } ?>">
 												<a href="invoices.php">
 													<i class="fas fa-file-invoice"></i>
 													<span>Invoices</span>
 												</a>
 											</li>
-											<li>
+											<!-- <li class="<?php if($status == 5){ ?> active <?php } ?>">
 												<a href="reviews.php">
 													<i class="fas fa-star"></i>
 													<span>Reviews</span>
 												</a>
-											</li>
+											</li> -->
 											<!-- <li>
 												<a href="chat-doctor.php">
 													<i class="fas fa-comments"></i>
@@ -71,25 +71,25 @@
 													<small class="unread-msg">23</small>
 												</a>
 											</li> -->
-											<li>
+											<li class="<?php if($status == 6){ ?> active <?php } ?>">
 												<a href="doctor-profile-settings.php">
 													<i class="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
-											<li>
+											<!-- <li class="<?php if($status == 7){ ?> active <?php } ?>">
 												<a href="social-media.php">
 													<i class="fas fa-share-alt"></i>
 													<span>Social Media</span>
 												</a>
-											</li>
-											<li>
+											</li> -->
+											<li class="<?php if($status == 8){ ?> active <?php } ?>">
 												<a href="doctor-change-password.php">
 													<i class="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
-											<li>
+											<li class="<?php if($status == 9){ ?> active <?php } ?>">
 												<a href="logout.php">
 													<i class="fas fa-sign-out-alt"></i>
 													<span>Logout</span>

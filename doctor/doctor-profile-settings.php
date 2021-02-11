@@ -38,7 +38,7 @@
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 						
 							<!-- Profile Sidebar -->
-							<?php include 'includes/sidebar.php'?>
+							<?php $status = 6; include 'includes/sidebar.php'?>
 							<!-- /Profile Sidebar -->
 							
 						</div>
@@ -53,7 +53,7 @@
 											<div class="form-group">
 												<div class="change-avatar">
 													<div class="profile-img">
-														<img src="../assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+														<img src="../assets/img/doctors/<?php echo $doctor['image']?>" alt="User Image">
 													</div>
 													<div class="upload-img">
 														<div class="change-photo-btn">
@@ -65,34 +65,34 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6">
+										<!-- <div class="col-md-6">
 											<div class="form-group">
-												<label>Username <span class="text-danger">*</span></label>
+												<label>Name <span class="text-danger">*</span></label>
 												<input type="text" class="form-control" readonly>
 											</div>
-										</div>
-										<div class="col-md-6">
+										</div> -->
+										<div class="col-md-12">
 											<div class="form-group">
 												<label>Email <span class="text-danger">*</span></label>
-												<input type="email" class="form-control" readonly>
+												<input type="email" class="form-control" placeholder="<?php echo $doctor['email']?>" readonly>
 											</div>
 										</div>
-										<div class="col-md-6">
+										<div class="col-md-12">
 											<div class="form-group">
 												<label>First Name <span class="text-danger">*</span></label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="<?php echo $doctor['name']?>" class="form-control">
 											</div>
 										</div>
-										<div class="col-md-6">
+										<!-- <div class="col-md-6">
 											<div class="form-group">
 												<label>Last Name <span class="text-danger">*</span></label>
 												<input type="text" class="form-control">
 											</div>
-										</div>
+										</div> -->
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>Phone Number</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="<?php echo $doctor['contact_no']?>" class="form-control">
 											</div>
 										</div>
 										<div class="col-md-6">
@@ -107,8 +107,8 @@
 										</div>
 										<div class="col-md-6">
 											<div class="form-group mb-0">
-												<label>Date of Birth</label>
-												<input type="text" class="form-control">
+												<label>Experience</label>
+												<input type="text" placeholder="<?php echo $doctor['experience']?>" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -122,7 +122,7 @@
 									<h4 class="card-title">About Me</h4>
 									<div class="form-group mb-0">
 										<label>Biography</label>
-										<textarea class="form-control" rows="5"></textarea>
+										<textarea class="form-control" placeholder="<?php echo $doctor['description']?>" rows="5"></textarea>
 									</div>
 								</div>
 							</div>
@@ -136,16 +136,16 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>Clinic Name</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="<?php echo $doctor['hospital']?>" class="form-control">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>Clinic Address</label>
-												<input type="text" class="form-control">
+												<input type="text" placeholder="<?php echo $doctor['address']?>" class="form-control">
 											</div>
 										</div>
-										<div class="col-md-12">
+										<!-- <div class="col-md-12">
 											<div class="form-group">
 												<label>Clinic Images</label>
 												<form action="#" class="dropzone"></form>
@@ -160,14 +160,14 @@
 													<a href="javascript:void(0);" class="btn btn-icon btn-danger btn-sm"><i class="far fa-trash-alt"></i></a>
 												</div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
 							<!-- /Clinic Info -->
 
 							<!-- Contact Details -->
-							<div class="card contact-card">
+							<!-- <div class="card contact-card">
 								<div class="card-body">
 									<h4 class="card-title">Contact Details</h4>
 									<div class="row form-row">
@@ -210,11 +210,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Contact Details -->
 							
 							<!-- Pricing -->
-							<div class="card">
+							<!-- <div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Pricing</h4>
 									
@@ -240,21 +240,21 @@
 									</div>
 									
 								</div>
-							</div>
+							</div> -->
 							<!-- /Pricing -->
 							
 							<!-- Services and Specialization -->
 							<div class="card services-card">
 								<div class="card-body">
 									<h4 class="card-title">Services and Specialization</h4>
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<label>Services</label>
 										<input type="text" data-role="tagsinput" class="input-tags form-control" placeholder="Enter Services" name="services" value="Tooth cleaning " id="services">
 										<small class="form-text text-muted">Note : Type & Press enter to add new services</small>
-									</div> 
+									</div>  -->
 									<div class="form-group mb-0">
 										<label>Specialization </label>
-										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="specialist" value="Children Care,Dental Care" id="specialist">
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="<?php echo $doctor['specialities']?>" name="specialist" id="specialist">
 										<small class="form-text text-muted">Note : Type & Press  enter to add new specialization</small>
 									</div> 
 								</div>              
@@ -272,34 +272,34 @@
 													<div class="col-12 col-md-6 col-lg-4">
 														<div class="form-group">
 															<label>Degree</label>
-															<input type="text" class="form-control">
+															<input type="text" placeholder="<?php echo $doctor['qualification']?>" class="form-control">
 														</div> 
 													</div>
 													<div class="col-12 col-md-6 col-lg-4">
 														<div class="form-group">
 															<label>College/Institute</label>
-															<input type="text" class="form-control">
+															<input type="text" placeholder="<?php echo $doctor['college']?>" class="form-control">
 														</div> 
 													</div>
 													<div class="col-12 col-md-6 col-lg-4">
 														<div class="form-group">
 															<label>Year of Completion</label>
-															<input type="text" class="form-control">
+															<input type="text" placeholder="<?php echo $doctor['yearofcompletion']?>" class="form-control">
 														</div> 
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="add-more">
+									<!-- <div class="add-more">
 										<a href="javascript:void(0);" class="add-education"><i class="fa fa-plus-circle"></i> Add More</a>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<!-- /Education -->
 						
 							<!-- Experience -->
-							<div class="card">
+							<!-- <div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Experience</h4>
 									<div class="experience-info">
@@ -338,11 +338,11 @@
 										<a href="javascript:void(0);" class="add-experience"><i class="fa fa-plus-circle"></i> Add More</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Experience -->
 							
 							<!-- Awards -->
-							<div class="card">
+							<!-- <div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Awards</h4>
 									<div class="awards-info">
@@ -365,11 +365,11 @@
 										<a href="javascript:void(0);" class="add-award"><i class="fa fa-plus-circle"></i> Add More</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Awards -->
 							
 							<!-- Memberships -->
-							<div class="card">
+							<!-- <div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Memberships</h4>
 									<div class="membership-info">
@@ -386,11 +386,11 @@
 										<a href="javascript:void(0);" class="add-membership"><i class="fa fa-plus-circle"></i> Add More</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Memberships -->
 							
 							<!-- Registrations -->
-							<div class="card">
+						<!-- 	<div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Registrations</h4>
 									<div class="registrations-info">
@@ -413,7 +413,7 @@
 										<a href="javascript:void(0);" class="add-reg"><i class="fa fa-plus-circle"></i> Add More</a>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- /Registrations -->
 							
 							<div class="submit-section submit-btn-bottom">
