@@ -11,14 +11,17 @@
 							<li class="<?php if($status == 2){ ?> active <?php } ?>"> 
 								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
-							<li class="<?php if($status == 3){ ?> active <?php } ?>"> 
+							<!-- <li class="<?php if($status == 3){ ?> active <?php } ?>"> 
 								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
-							</li>
+							</li> -->
 							<li class="<?php if($status == 4){ ?> active <?php } ?>"> 
 								<a href="doctor-list.php"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
 							</li>
 							<li class="<?php if($status == 5){ ?> active <?php } ?>"> 
 								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
+							</li>
+							<li class="<?php if($status == 6){ ?> active <?php } ?>"> 
+								<a href="news.php"><i class="fe fe-users"></i> <span>News & Events</span></a>
 							</li>
 							<!-- <li> 
 								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>

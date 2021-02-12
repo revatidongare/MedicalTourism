@@ -88,4 +88,66 @@ include '../config.php';
       header('location: doctor-list.php?q=2');
      }
   }
+
+  if(isset($_POST['addevent'])){
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $address = $_POST['address'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    // $specialities = $_POST['specialities'];
+    // $experience = $_POST['experience'];
+    // $password = $_POST['password'];
+    // $address = $_POST['address'];
+    // $city = $_POST['city'];
+    // $qualification = $_POST['qualification'];
+    // $timeslot = $_POST['timeslot'];
+    //  $country = $_POST['country'];
+     // $image = $_POST['image'];
+      $image= $_FILES["image"]["name"];
+    //   $school_id = $_POST['school_id'];
+    // $photo = $_FILES["photo"]["name"];
+
+      //file upload code.
+    $target_dir = "../assets/img/event/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
+    $iconFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        // echo "Sorry, file already exists.";
+      $uploadOk = 2;
+    }
+    // Allow certain file formats
+    if($iconFileType != "jpg" && $iconFileType != "jpeg" && $iconFileType != "png" ) {
+        // echo "Sorry, only PDF files are allowed.";
+      $uploadOk = 3;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk != 1) {
+        // echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+      if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        // echo "The file ". basename( $_FILES["photo"]["name"]). " has been uploaded.";
+      } else {
+        echo "Sorry, there was an error uploading your file.";
+      }
+    }
+
+    $q = "INSERT INTO `event` (`title`, `image`, `address`, `date`, `time`, `description`) VALUES ('$title', '$image', '$address', '$date', '$time', '$description')";
+    $stmt=$conn->prepare($q);
+  $stmt->execute();
+  // $row = $stmt->fetch();
+    $conn=null;
+
+    if ($stmt) {
+      
+      header('location: news.php?q=3');
+    }
+    else{
+      header('location: news.php?q=2');
+     }
+  }
 ?>
