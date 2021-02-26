@@ -13,7 +13,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include 'includes/sidebar.php';?>
+            <?php $status = 1; include 'includes/sidebar.php';?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->

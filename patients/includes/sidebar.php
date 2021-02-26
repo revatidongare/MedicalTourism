@@ -29,7 +29,7 @@
 								<div class="dashboard-widget">
 									<nav class="dashboard-menu">
 										<ul>
-											<li class="active">
+											<li class="<?php if($status == 1){ ?> active <?php } ?>">
 												<a href="patient-dashboard.php">
 													<i class="fas fa-columns"></i>
 													<span>Dashboard</span>
@@ -48,19 +48,19 @@
 													<small class="unread-msg">23</small>
 												</a>
 											</li> -->
-											<li>
+											<li class="<?php if($status == 2){ ?> active <?php } ?>">
 												<a href="profile-settings.php">
 													<i class="fas fa-user-cog"></i>
 													<span>Profile Settings</span>
 												</a>
 											</li>
-											<li>
+											<li class="<?php if($status == 3){ ?> active <?php } ?>">
 												<a href="change-password.php">
 													<i class="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>
 											</li>
-											<li>
+											<li class="<?php if($status == 4){ ?> active <?php } ?>">
 												<a href="logout.php">
 													<i class="fas fa-sign-out-alt"></i>
 													<span>Logout</span>

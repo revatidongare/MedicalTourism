@@ -121,7 +121,7 @@
 								<p>Medical tourism is not a recent phenomenon.</p>
 								<p>From the time of the Sumerians (circa 4000 BC), who constructed the earliest known health complexes that were built around hot springs, to the 18th and 19th centuries when Europeans and Americans travelled to remote areas with health retreats to find cures for tuberculosis, quality healthcare – wherever it could be found — has been a common pursuit. </p>	
 								<p>Fast-forward to 1997, when the Asian economic crisis and the collapse of Asian currencies prompted government officials in these nations to market premiere destinations for international healthcare, at a fraction of what Western countries could offer.</p>				
-								<a href="javascript:;">Read More..</a>
+								<!-- <a href="javascript:;">Read More..</a> -->
 							</div>
 						</div>
 						<div class="col-lg-8">

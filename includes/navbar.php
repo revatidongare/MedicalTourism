@@ -39,7 +39,7 @@ include 'patients/session.php';
 								<a href="internationalforum.php">International Forum</a>
 							</li> 
 							<li class="active">
-								<a href="domestictourism.php"> News & Events</a>
+								<a href="news.php"> News & Events</a>
 							</li>  
 
 							<!-- <li class="has-submenu">
