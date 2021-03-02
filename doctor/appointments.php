@@ -68,7 +68,7 @@
 								<!-- Appointment List -->
 								<div class="appointment-list">
 									<div class="profile-info-widget">
-										<a href="patient-profile.php" class="booking-doc-img">
+										<a href="patient-profile.php?pat=<?php echo $dresult['id'];?>" class="booking-doc-img">
 											<img src="../assets/img/patients/<?php echo $dresult['image'];?>" alt="User Image">
 										</a>
 										<div class="profile-det-info">

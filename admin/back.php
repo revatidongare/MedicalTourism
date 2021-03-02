@@ -28,10 +28,16 @@ $conn=null;
 include '../config.php';
 
   if(isset($_POST['registerdoctor'])){
-    $name = $_POST['name'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $dob = $_POST['dob'];
+    $youtube = $_POST['youtube'];
     $contact = $_POST['contact'];
+     $description = $_POST['description'];
     $email = $_POST['email'];
-    $fees = $_POST['fees'];
+    $feesinrs = $_POST['feesinrs'];
+    $feesindollar = $_POST['feesindollar'];
+
     $hospital = $_POST['hospital'];
     $specialities = $_POST['specialities'];
     $experience = $_POST['experience'];
@@ -43,38 +49,105 @@ include '../config.php';
      $country = $_POST['country'];
      // $image = $_POST['image'];
      	$image= $_FILES["image"]["name"];
+        $license= $_FILES["license"]["name"];
+          $degreeimage= $_FILES["degreeimage"]["name"];
     //   $school_id = $_POST['school_id'];
     // $photo = $_FILES["photo"]["name"];
 
-      //file upload code.
-    $target_dir = "../assets/img/doctor/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+      //Dp upload code.
+    $target_dir = "../assets/img/doctors/";
+    $temp = explode(".", $_FILES["image"]["name"]);
+    $image1 = round(microtime(true)) . '.' . end($temp);
+    $target_file1 = $target_dir . $image1;
     $uploadOk = 1;
-    $iconFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $iconFileType = strtolower(pathinfo($target_file1,PATHINFO_EXTENSION));
 
     // Check if file already exists
-    if (file_exists($target_file)) {
+    if (file_exists($target_file1)) {
         // echo "Sorry, file already exists.";
-      $uploadOk = 2;
+        $uploadOk = 2;
     }
     // Allow certain file formats
-    if($iconFileType != "jpg" && $iconFileType != "jpeg" && $iconFileType != "png" ) {
-        // echo "Sorry, only PDF files are allowed.";
-      $uploadOk = 3;
+    if($iconFileType != "jpg" && $iconFileType != "png" && $iconFileType != "jpeg"
+    && $iconFileType != "gif" ) {
+        //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
     }
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk != 1) {
         // echo "Sorry, your file was not uploaded.";
     // if everything is ok, try to upload file
     } else {
-      if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        // echo "The file ". basename( $_FILES["photo"]["name"]). " has been uploaded.";
-      } else {
-        echo "Sorry, there was an error uploading your file.";
-      }
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file1)) {
+            echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your image1.";
+        }
     }
 
-    $q = "INSERT INTO `doctor` (`city`, `experience`, `hospital`, `timeslot`, `address`, `specialities`, `name`, `fees`, `qualification`, `image`, `email`, `password`, `contact_no`) VALUES ('$city', '$experience', '$hospital', '$timeslot', '$address', '$specialities', '$name', '$fees', '$qualification', '$image', '$email', '$password' , '$contact')";
+    //license upload
+     $target_dir111 = "../assets/img/doctors/license/";
+    $temp = explode(".", $_FILES["license"]["name"]);
+    $license1 = round(microtime(true)) . '.' . end($temp);
+    $target_file111 = $target_dir111 . $license1;
+    $uploadOk = 1;
+    $iconFileType = strtolower(pathinfo($target_file111,PATHINFO_EXTENSION));
+
+    // Check if file already exists
+    if (file_exists($target_file111)) {
+        // echo "Sorry, file already exists.";
+        $uploadOk = 2;
+    }
+    // Allow certain file formats
+    if($iconFileType != "jpg" && $iconFileType != "png" && $iconFileType != "jpeg"
+    && $iconFileType != "gif" ) {
+        //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk != 1) {
+        // echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["license"]["tmp_name"], $target_file111)) {
+            echo "The file ". basename( $_FILES["license"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your image1.";
+        }
+    }
+
+    //degree upload
+     $target_dir11 = "../assets/img/doctors/degree/";
+    $temp = explode(".", $_FILES["degreeimage"]["name"]);
+    $degreeimage1 = round(microtime(true)) . '.' . end($temp);
+    $target_file11 = $target_dir11 . $degreeimage1;
+    $uploadOk = 1;
+    $iconFileType = strtolower(pathinfo($target_file11,PATHINFO_EXTENSION));
+
+    // Check if file already exists
+    if (file_exists($target_file11)) {
+        // echo "Sorry, file already exists.";
+        $uploadOk = 2;
+    }
+    // Allow certain file formats
+    if($iconFileType != "jpg" && $iconFileType != "png" && $iconFileType != "jpeg"
+    && $iconFileType != "gif" ) {
+        //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk != 1) {
+        // echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["degreeimage"]["tmp_name"], $target_file11)) {
+            echo "The file ". basename( $_FILES["degreeimage"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your image.";
+        }
+    }
+
+    $q = "INSERT INTO `doctor` (`city`, `experience`, `hospital`, `timeslot`, `address`, `specialities`, `fname`, `lname`, `dob`, `description`, `indianfees` , `internationalfees`, `qualification`, `image`, `license`, `degreecerti`, `email`, `password`, `youtube`, `contact_no`) VALUES ('$city', '$experience', '$hospital', '$timeslot', '$address', '$specialities', '$fname','$lname','$dob', '$description' , '$feesinrs','$feesindollar', '$qualification', '$image1', '$license1', '$degreeimage1', '$email', '$password' , '$youtube' , '$contact')";
     $stmt=$conn->prepare($q);
   $stmt->execute();
   // $row = $stmt->fetch();

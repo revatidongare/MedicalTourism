@@ -16,7 +16,7 @@
 											<img src="../assets/img/doctors/<?php echo $doctor['image']?>" alt="User Image">
 										</a>
 										<div class="profile-det-info">
-											<h3><?php echo $doctor['name']?></h3>
+											<h3><?php echo $doctor['fname']?></h3>
 											
 											<div class="patient-details">
 												<h5 class="mb-0"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></h5>
