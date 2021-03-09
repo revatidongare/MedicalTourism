@@ -80,17 +80,17 @@
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p> A:Shop No. C , Commercial House,Jupiter CHS Near Ganesh Temple,Kalyani Nagar </p>
+											<p>Office Number , C , Commercial House, Jupiter Co operative Housing Society,  Central Avenue road, Near Shri Ganesh Temple, Kalyani nagar,  Pune , India : 411006</p>
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											022 20-48601029<br>
+											020 2048601029<br>
 											<i class="fas fa-phone-alt"></i>
-											<a href="tel:9325656756" style="color: white;">+91 9325656756</a>
+											<a href="tel:9922514719" style="color: white;">+91 9922514719</a>
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
-											<a href="mailto:contact@trustyoudoctor.com" style="color: white;">contact@trustyoudoctor.com</a>
+											<a href="mailto:contact@journeyworlddmc.com" style="color: white;">contact@journeyworlddmc.com</a>
 										</p>
 									</div>
 								</div>
