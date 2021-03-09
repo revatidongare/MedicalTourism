@@ -9,7 +9,8 @@
 		<div class="main-wrapper">
 		
 			<!-- Header -->
-			<?php include 'includes/navbar.php';?>
+			<?php 
+			include 'includes/navbar.php';?>
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
@@ -36,7 +37,7 @@
 					<div class="row">
 					
 						<!-- Profile Sidebar -->
-						<?php include 'includes/sidebar.php'?>
+						<?php $status = 2; include 'includes/sidebar.php'?>
 						<!-- /Profile Sidebar -->
 						
 						<div class="col-md-7 col-lg-8 col-xl-9">

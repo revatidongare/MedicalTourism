@@ -1,3 +1,6 @@
+<?php      
+		$patid = $_GET['id'];
+?>
 <!DOCTYPE html> 
 <html lang="en">
 	
@@ -31,6 +34,13 @@
 			<!-- /Breadcrumb -->
 			
 			<!-- Page Content -->
+			<?php 
+							$query = "SELECT * FROM `doctor` where `id`= $patid ";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $patient=$stmt->fetch();
+                     ?>
 			<div class="content">
 				<div class="container-fluid">
 
@@ -43,23 +53,23 @@
 									<div class="pro-widget-content">
 										<div class="profile-info-widget">
 											<a href="#" class="booking-doc-img">
-												<img src="../assets/img/patients/patient.jpg" alt="User Image">
+												<img src="../assets/img/patients/<?php echo $patient['image'] ?>" alt="User Image">
 											</a>
 											<div class="profile-det-info">
-												<h3>Richard Wilson</h3>
+												<h3><?php echo $patient['name'] ?></h3>
 												
 												<div class="patient-details">
 													<h5><b>Patient ID :</b> PT0016</h5>
-													<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
+													<h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> <?php echo $patient['address'] ?></h5>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="patient-info">
 										<ul>
-											<li>Phone <span>+1 952 001 8563</span></li>
-											<li>Age <span>38 Years, Male</span></li>
-											<li>Blood Group <span>AB+</span></li>
+											<li>Phone <span><?php echo $patient['contact'] ?></span></li>
+											<!-- <li>Age <span>38 Years, Male</span></li> -->
+											<li>Blood Group <span><?php echo $patient['bloodgroup'] ?></span></li>
 										</ul>
 									</div>
 								</div>
@@ -140,6 +150,17 @@
 																	<th></th>
 																</tr>
 															</thead>
+															<?php if(isset($_SESSION['id'])) {
+									$id = $_SESSION['id'] ;
+							$query = "SELECT * FROM `appointment` where `doctor_id` = $id  AND `patient_id` = $patid ";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $doctor){
+                              ?>
 															<tbody>
 																<tr>
 																	<td>

@@ -13,7 +13,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php $status = 4; include 'includes/sidebar.php';?>
+            <?php $status = 6; include 'includes/sidebar.php';?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -24,7 +24,7 @@
 					<div class="page-header">
 						<div class="row">
 							<div class="col-sm-7 col-auto">
-								<h3 class="page-title">List of Doctors</h3>
+								<h3 class="page-title">List of Events</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
 									<li class="breadcrumb-item"><a href="javascript:(0);">Users</a></li>
@@ -46,57 +46,50 @@
 										<table class="datatable table table-hover table-center mb-0">
 											<thead>
 												<tr>
-													<th>Doctor Name</th>
-													<th>Email</th>
-													<th>Contact_No</th>
-													<!-- <th>IndianFees</th> -->
-													<!-- <th>International Fees</th> -->
-													<!-- <th>TimeSlot</th> -->
-													<th>Speciality</th>
-													<!-- <th>Experience</th> -->
-													<!-- <th>Qualification</th> -->
-													<!-- <th>Hospital</th> -->
-													<!-- <th>Address</th> -->
-													<th>City</th>
+													<th>Event Name</th>
+													<th>Image</th>
+													<th>Description</th>
+													<th>Address</th>
+													<th>Date</th>
+													<th>Time</th>
+													<th>Delete</th>
+													<!-- <th>Qualification</th>
+													<th>Hospital</th>
+													<th>Address</th>
+													<th>City</th> -->
 													<!-- <th>Country</th> -->
 																										
-													<th>Account Status</th>
+													<!-- <th>Account Status</th> -->
 													
 												</tr>
 											</thead>
 											<tbody>
 												<?php 
-												$query = "SELECT * FROM `doctor`";
+												$query = "SELECT * FROM `event`";
                              include '../config.php';
                              $stmt=$conn->prepare($query);
                              $stmt->execute();
                              $result=$stmt->fetchAll();
                              $conn=null;
                                   
-                             foreach($result as $doctor){
+                             foreach($result as $event){
                              ?>
 												<tr>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php?id=<?php echo $doctor['id']?>" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/doctors/<?php echo $doctor['image']?>" alt="User Image"></a>
-															<a href="profile.php?id=<?php echo $doctor['id']?>"><?php echo $doctor['fname']?> <?php echo $doctor['lname']?></a>
-														</h2>
-													</td>
-													<td><?php echo $doctor['email']?></td>
-													<td><?php echo $doctor['contact_no']?></td>
-													<!-- <td><?php echo $doctor['indianfees']?></td> -->
-													<!-- <td><?php echo $doctor['internationalfees']?></td> -->
-													<!-- <td><?php echo $doctor['timeslot']?></td> -->
-													<td><?php echo $doctor['specialities']?></td>
-													<!-- <td><?php echo $doctor['experience']?></td> -->
-													<!-- <td><?php echo $doctor['qualification']?></td> -->
-													<!-- <td><?php echo $doctor['hospital']?></td> -->
-													<!-- <td><?php echo $doctor['address']?></td> -->
-													<td><?php echo $doctor['city']?></td>
+													<td><?php echo $event['title']?></td>
+													<td><img width="100px" src="../assets/img/event/<?php echo $event['image']?>"></td>
+													<td><?php echo $event['description']?></td>
+													<td><?php echo $event['address']?></td>
+													<td><?php echo $event['date']?></td>
+													<td><?php echo $event['time']?></td>
+													<!-- <td><?php echo $event['experience']?></td> -->
+													<!-- <td><?php echo $doctor['qualification']?></td>
+													<td><?php echo $doctor['hospital']?></td>
+													<td><?php echo $doctor['address']?></td>
+													<td><?php echo $doctor['city']?></td> -->
 													<!-- <td><?php echo $doctor['country']?></td>		 -->
 													
 													
-													<td>
+													<!-- <td>
 														<?php if( $doctor['active'] == 1 ) { ?>
 														<div class="status-toggle">
 															<input type="checkbox" id="status_<?php echo $doctor['id']?>" class="check" checked>
@@ -108,7 +101,7 @@
 															<label for="status_<?php echo $doctor['id']?>" class="checktoggle">checkbox</label>
 														</div>
 														<?php }?>
-													</td>
+													</td> -->
 												</tr>
 												<?php }?>
 												<!-- <tr>
@@ -335,7 +328,7 @@
 				<div class="modal-dialog modal-dialog-centered" role="document" >
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title">Add Doctor</h5>
+							<h5 class="modal-title">Add News / Event</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -343,34 +336,22 @@
 						<div class="modal-body">
 							<form action="back.php" method="post" enctype="multipart/form-data">
 								<div class="row form-row">
-									<div class="col-12 col-sm-6">
+									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>First Name</label>
-											<input type="text" name="fname" class="form-control">
+											<label>Title</label>
+											<input type="text" name="title" class="form-control">
 										</div>
 									</div>
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>Last Name</label>
-											<input type="text" name="lname" class="form-control">
-										</div>
-									</div>
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>DOB</label>
-											<input type="date" name="dob" class="form-control">
-										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Speciality</label>
 											<input type="text" name="specialities" class="form-control">
 										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									</div> -->
+									<div class="col-12 col-sm-12">
 										<div class="form-group">
-											<label>Hospital</label>
-											<input type="text" name="hospital" class="form-control">
+											<label>Description</label>
+											<textarea name="description" rows="4" class="form-control"></textarea>
 										</div>
 									</div>
 									<div class="col-12 col-sm-6">
@@ -379,117 +360,69 @@
 											<input type="text" name="address" class="form-control">
 										</div>
 									</div>
-									<div class="col-12 col-sm-6">
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>City</label>
 											<input type="text" name="city" class="form-control">
 										</div>
-									</div>
+									</div> -->
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
-											<label>Country</label>
-											<input type="text" name="country" class="form-control">
+											<label>Date</label>
+											<input type="date" name="date" class="form-control">
 										</div>
 									</div>
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
-											<label>Indian Fees</label>
-											<input type="text" name="feesinrs" class="form-control">
+											<label>Time</label>
+											<input type="text" name="time" class="form-control">
 										</div>
 									</div>
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>International Fees</label>
-											<input type="text" name="feesindollar" class="form-control">
-										</div>
-									</div>
-
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>Experience</label>
-											<input type="text" name="experience" class="form-control">
-										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Time Slot</label>
 											<input type="text" name="timeslot" class="form-control">
 										</div>
-									</div>
+									</div> -->
 									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Fees</label>
 											<input type="text" name="fees" class="form-control">
 										</div>
 									</div> -->
-									<div class="col-12 col-sm-6">
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Qualification</label>
 											<input type="text" name="qualification" class="form-control">
 										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									</div> -->
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Email</label>
 											<input type="text" name="email" class="form-control">
 										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									</div> -->
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Password</label>
 											<input type="text" name="password" class="form-control">
 										</div>
-									</div>
-
+									</div> -->
 									<div class="col-12 col-sm-6">
 										<div class="form-group">
-											<label>Confirm Password</label>
-											<input type="text" name="cpassword" class="form-control">
-										</div>
-									</div>
-
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>Degree Certificate</label>
-											<input type="file" name="degreeimage" class="form-control">
-										</div>
-									</div>
-
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>Profile Image</label>
+											<label>Image</label>
 											<input type="file" name="image" class="form-control">
 										</div>
 									</div>
-									<div class="col-12 col-sm-6">
-										<div class="form-group">
-											<label>License</label>
-											<input type="file" name="license" class="form-control">
-										</div>
-									</div>
-									<div class="col-12 col-sm-6">
+									<!-- <div class="col-12 col-sm-6">
 										<div class="form-group">
 											<label>Contact</label>
 											<input type="text" name="contact" class="form-control">
 										</div>
-									</div>
-									<div class="col-12 col-sm-12">
-										<div class="form-group">
-											<label>Youtube Channel Link</label>
-											<input type="text" name="youtube" class="form-control">
-										</div>
-									</div>
+									</div> -->
 									
-									<div class="col-12 col-sm-12">
-										<div class="form-group">
-											<label>Description</label>
-											<textarea name="description" rows="6" class="form-control"></textarea>
-										</div>
-									</div>
-									
-
 								</div>
-								<button type="submit" name="registerdoctor" class="btn btn-primary btn-block">Save Changes</button>
+								<button type="submit" name="addevent" class="btn btn-primary btn-block">Save Changes</button>
 							</form>
 						</div>
 					</div>
@@ -500,7 +433,7 @@
 			<?php
     if(isset($_GET['q'])) {            
             if($_GET['q'] == 3){ ?>
-            <script> swal("Dotor added Successfully..", {
+            <script> swal("Event added Successfully..", {
   buttons: false,
   timer: 1500,
 });</script>

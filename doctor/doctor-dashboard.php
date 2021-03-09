@@ -38,7 +38,7 @@
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 							
 							<!-- Profile Sidebar -->
-							<?php include 'includes/sidebar.php'?>
+							<?php $status = 1; include 'includes/sidebar.php'?>
 							<!-- /Profile Sidebar -->
 							
 						</div>
@@ -54,7 +54,7 @@
 													<div class="dash-widget dct-border-rht">
 														<div class="circle-bar circle-bar1">
 															<div class="circle-graph1" data-percent="75">
-																<img src="../assets/img/icon-01.png" class="img-fluid" alt="patient">
+																<img src="../assets/img/icon-01.png" style="position: unset;" class="img-fluid" alt="patient">
 															</div>
 														</div>
 														<div class="dash-widget-info">
@@ -69,13 +69,19 @@
 													<div class="dash-widget dct-border-rht">
 														<div class="circle-bar circle-bar2">
 															<div class="circle-graph2" data-percent="65">
-																<img src="../assets/img/icon-02.png" class="img-fluid" alt="Patient">
+																<img src="../assets/img/icon-02.png" style="position: unset;"class="img-fluid" alt="Patient">
 															</div>
 														</div>
+														<?php 
+							$query = "SELECT count(`id`) FROM `appointment` where `doctor_id` = $id and `appointmentdate`= DATE(NOW())";
+                             include '../config.php';
+                             $res = $conn->query($query);
+                             $todaycount = $res->fetchColumn();
+                             $conn=null; ?>
 														<div class="dash-widget-info">
 															<h6>Today Patient</h6>
-															<h3>160</h3>
-															<p class="text-muted">06, Nov 2019</p>
+															<h3><?php echo $todaycount; ?></h3>
+															<p class="text-muted"><?php echo DATE("Y/m/d");?></p>
 														</div>
 													</div>
 												</div>
@@ -84,13 +90,19 @@
 													<div class="dash-widget">
 														<div class="circle-bar circle-bar3">
 															<div class="circle-graph3" data-percent="50">
-																<img src="../assets/img/icon-03.png" class="img-fluid" alt="Patient">
+																<img src="../assets/img/icon-03.png" class="img-fluid" alt="Patient" style="position: unset;">
 															</div>
 														</div>
+														<?php 
+							$query = "SELECT count(`id`) FROM `appointment` where `doctor_id` = $id";
+                             include '../config.php';
+                             $res = $conn->query($query);
+                             $count = $res->fetchColumn();
+                             $conn=null; ?>
 														<div class="dash-widget-info">
-															<h6>Appoinments</h6>
-															<h3>85</h3>
-															<p class="text-muted">06, Apr 2019</p>
+															<h6> Total Appoinments</h6>
+															<h3><?php echo $count; ?></h3>
+															<p class="text-muted"><?php echo DATE("Y/m/d")?></p>
 														</div>
 													</div>
 												</div>
@@ -128,22 +140,41 @@
 																	<tr>
 																		<th>Patient Name</th>
 																		<th>Appt Date</th>
-																		<th>Purpose</th>
+																		<!-- <th>Purpose</th> -->
 																		<th>Type</th>
 																		<th class="text-center">Paid Amount</th>
 																		<th></th>
 																	</tr>
 																</thead>
 																<tbody>
+																	<?php 
+							$query = "SELECT * FROM `appointment` where `doctor_id` = $id and `appointmentdate`> DATE(NOW())";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $appointment){
+                             	$pid = $appointment['patient_id'];
+
+                             $dquery = "SELECT * FROM `patient_master` where `id` = $pid";
+                             include '../config.php';
+                             $dstmt=$conn->prepare($dquery);
+                             $dstmt->execute();
+                             $dresult=$dstmt->fetch();
+                             $conn=null;
+
+																?>
 																	<tr>
 																		<td>
 																			<h2 class="table-avatar">
-																				<a href="patient-profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/patients/patient.jpg" alt="User Image"></a>
-																				<a href="patient-profile.php">Richard Wilson <span>#PT0016</span></a>
+																				<a href="patient-profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/patients/<?php echo $dresult['image']?>" alt="User Image"></a>
+																				<a href="patient-profile.php"><?php echo $dresult['name']?> <span>#PT0016</span></a>
 																			</h2>
 																		</td>
-																		<td>11 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-																		<td>General</td>
+																		<td><?php echo $appointment['appointmentdate'];?><span class="d-block text-info">10.00 AM</span></td>
+																		<!-- <td>General</td> -->
 																		<td>New Patient</td>
 																		<td class="text-center">$150</td>
 																		<td class="text-right">
@@ -161,7 +192,8 @@
 																			</div>
 																		</td>
 																	</tr>
-																	<tr>
+																<?php }?>
+																	<!-- <tr>
 																		<td>
 																			<h2 class="table-avatar">
 																				<a href="patient-profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/patients/patient1.jpg" alt="User Image"></a>
@@ -290,7 +322,7 @@
 																				</a>
 																			</div>
 																		</td>
-																	</tr>
+																	</tr> -->
 																</tbody>
 															</table>		
 														</div>
@@ -316,6 +348,25 @@
 																	</tr>
 																</thead>
 																<tbody>
+																	<?php 
+							$query = "SELECT * FROM `appointment` where `doctor_id` = $id and `appointmentdate`= DATE(NOW())";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $appointment){
+                             	$pid = $appointment['patient_id'];
+
+                             $dquery = "SELECT * FROM `patient_master` where `id` = $pid";
+                             include '../config.php';
+                             $dstmt=$conn->prepare($dquery);
+                             $dstmt->execute();
+                             $dresult=$dstmt->fetch();
+                             $conn=null;
+
+																?>
 																	<tr>
 																		<td>
 																			<h2 class="table-avatar">
@@ -342,7 +393,8 @@
 																			</div>
 																		</td>
 																	</tr>
-																	<tr>
+																<?php }?>
+																	<!-- <tr>
 																		<td>
 																			<h2 class="table-avatar">
 																				<a href="patient-profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="../assets/img/patients/patient7.jpg" alt="User Image"></a>
@@ -471,7 +523,7 @@
 																				</a>
 																			</div>
 																		</td>
-																	</tr>
+																	</tr> -->
 																</tbody>
 															</table>		
 														</div>	

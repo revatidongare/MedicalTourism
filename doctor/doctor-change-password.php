@@ -37,7 +37,7 @@
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 						
 							<!-- Profile Sidebar -->
-							<?php include 'includes/sidebar.php'?>
+							<?php $status = 8; include 'includes/sidebar.php'?>
 							<!-- /Profile Sidebar -->
 							
 						</div>

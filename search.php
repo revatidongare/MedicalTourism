@@ -133,7 +133,7 @@
 							if(isset($_POST['search'])){
 								$doctor = $_POST['doctor'];
 								$location = $_POST['location'];
-								$query = "SELECT * FROM `doctor` WHERE `city` = '$location' AND `active` = 1 OR `name`= '$doctor' OR `hospital` = '$doctor' ";
+								$query = "SELECT * FROM `doctor` WHERE `city` = '$location' AND `active` = 1 OR `fname`= '$doctor' OR `hospital` = '$doctor'";
 								include 'config.php';
 								$stmt=$conn->prepare($query);
 								$stmt->execute();
@@ -148,12 +148,12 @@
 												<div class="doctor-widget">
 													<div class="doc-info-left">
 														<div class="doctor-img">
-															<a href="doctor-profile.php">
+															<a href="doctor-profile.php?doctor=<?php echo $doctor['id']; ?>">
 																<img src="assets/img/doctors/<?php echo $doctor['image']?>" class="img-fluid" alt="User Image">
 															</a>
 														</div>
 														<div class="doc-info-cont">
-															<h4 class="doc-name"><a href="doctor-profile.php"><?php echo $doctor['name']?></a></h4>
+															<h4 class="doc-name"><a href="doctor-profile.php?doctor=<?php echo $doctor['id']; ?>"><?php echo $doctor['fname']?> <?php echo $doctor['lname']?></a></h4>
 															<p class="doc-speciality"><?php echo $doctor['hospital']?> </p>
 															<h5 class="doc-department"><?php echo $doctor['qualification']?> - <?php echo $doctor['specialities']?></h5>
 														<!-- <div class="rating">
@@ -201,7 +201,7 @@
 															<!-- <li><i class="far fa-thumbs-up"></i> 98%</li> -->
 															<li><i class="far fa-comment"></i> <?php echo $doctor['experience']?></li>
 															<li><i class="fas fa-map-marker-alt"></i> <?php echo $doctor['city']?></li>
-															<li><i class="far fa-money-bill-alt"></i> <?php echo $doctor['fees']?> <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+															<li><i class="far fa-money-bill-alt"></i> <?php echo $doctor['indianfees']?> <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
 														</ul>
 													</div>
 													<div class="clinic-booking">

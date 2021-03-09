@@ -9,7 +9,9 @@
 		<div class="main-wrapper">
 		
 			<!-- Header -->
-			<?php include 'includes/navbar.php';?>
+			<?php 
+			 
+			include 'includes/navbar.php';?>
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
@@ -37,7 +39,7 @@
 					<div class="row">
 						
 						<!-- Profile Sidebar -->
-						<?php include 'includes/sidebar.php'?>
+						<?php $status = 1; include 'includes/sidebar.php'?>
 						<!-- / Profile Sidebar -->
 						
 						<div class="col-md-7 col-lg-8 col-xl-9">
@@ -53,9 +55,9 @@
 											<li class="nav-item">
 												<a class="nav-link" href="#pat_prescriptions" data-toggle="tab">Prescriptions</a>
 											</li>
-											<li class="nav-item">
+											<!-- <li class="nav-item">
 												<a class="nav-link" href="#pat_medical_records" data-toggle="tab"><span class="med-records">Medical Records</span></a>
-											</li>
+											</li> -->
 											<li class="nav-item">
 												<a class="nav-link" href="#pat_billing" data-toggle="tab">Billing</a>
 											</li>
@@ -78,25 +80,44 @@
 																	<th>Appt Date</th>
 																	<th>Booking Date</th>
 																	<th>Amount</th>
-																	<th>Follow Up</th>
+																	<!-- <th>Follow Up</th> -->
 																	<th>Status</th>
 																	<th></th>
 																</tr>
 															</thead>
 															<tbody>
+																<?php 
+							$query = "SELECT * FROM `appointment` where `patient_id` = $id";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $appointment){
+                             	$did = $appointment['doctor_id'];
+
+                             $dquery = "SELECT * FROM `doctor` where `id` = $did";
+                             include '../config.php';
+                             $dstmt=$conn->prepare($dquery);
+                             $dstmt->execute();
+                             $dresult=$dstmt->fetch();
+                             $conn=null;
+
+																?>
 																<tr>
 																	<td>
 																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
+																			<a href="doctor/doctor-profile.php" class="avatar avatar-sm mr-2">
+																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/<?php echo $dresult['image'];?>" alt="User Image">
 																			</a>
-																			<a href="doctor-profile.php">Dr. Ruby Perrin <span>Dental</span></a>
+																			<a href="doctor-profile.php"><?php echo $dresult['name'];?> <span><?php echo $dresult['specialities'];?></span></a>
 																		</h2>
 																	</td>
-																	<td>14 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-																	<td>12 Nov 2019</td>
-																	<td>$160</td>
-																	<td>16 Nov 2019</td>
+																	<td><?php echo $appointment['appointmentdate'];?>  <span class="d-block text-info">10.00 AM</span></td>
+																	<td><?php echo $appointment['bookeddate'];?> </td>
+																	<td>Rs. <?php echo $dresult['fees'];?> </td>
+																	<!-- <td>16 Nov 2019</td> -->
 																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
 																	<td class="text-right">
 																		<div class="table-action">
@@ -109,231 +130,8 @@
 																		</div>
 																	</td>
 																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Darren Elder <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td>12 Nov 2019 <span class="d-block text-info">8.00 PM</span></td>
-																	<td>12 Nov 2019</td>
-																	<td>$250</td>
-																	<td>14 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-03.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Deborah Angel <span>Cardiology</span></a>
-																		</h2>
-																	</td>
-																	<td>11 Nov 2019 <span class="d-block text-info">11.00 AM</span></td>
-																	<td>10 Nov 2019</td>
-																	<td>$400</td>
-																	<td>13 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-04.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Sofia Brient <span>Urology</span></a>
-																		</h2>
-																	</td>
-																	<td>10 Nov 2019 <span class="d-block text-info">3.00 PM</span></td>
-																	<td>10 Nov 2019</td>
-																	<td>$350</td>
-																	<td>12 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-warning-light">Pending</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-05.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Marvin Campbell <span>Ophthalmology</span></a>
-																		</h2>
-																	</td>
-																	<td>9 Nov 2019 <span class="d-block text-info">7.00 PM</span></td>
-																	<td>8 Nov 2019</td>
-																	<td>$75</td>
-																	<td>11 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-06.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Katharine Berthold <span>Orthopaedics</span></a>
-																		</h2>
-																	</td>
-																	<td>8 Nov 2019 <span class="d-block text-info">9.00 AM</span></td>
-																	<td>6 Nov 2019</td>
-																	<td>$175</td>
-																	<td>10 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-07.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Linda Tobin <span>Neurology</span></a>
-																		</h2>
-																	</td>
-																	<td>8 Nov 2019 <span class="d-block text-info">6.00 PM</span></td>
-																	<td>6 Nov 2019</td>
-																	<td>$450</td>
-																	<td>10 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-08.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Paul Richard <span>Dermatology</span></a>
-																		</h2>
-																	</td>
-																	<td>7 Nov 2019 <span class="d-block text-info">9.00 PM</span></td>
-																	<td>7 Nov 2019</td>
-																	<td>$275</td>
-																	<td>9 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-09.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. John Gibbs <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td>6 Nov 2019 <span class="d-block text-info">8.00 PM</span></td>
-																	<td>4 Nov 2019</td>
-																	<td>$600</td>
-																	<td>8 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-10.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Olga Barlow  <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td>5 Nov 2019 <span class="d-block text-info">5.00 PM</span></td>
-																	<td>1 Nov 2019</td>
-																	<td>$100</td>
-																	<td>7 Nov 2019</td>
-																	<td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
+															<?php }?>
+																
 															</tbody>
 														</table>
 													</div>
@@ -357,15 +155,33 @@
 																</tr>     
 															</thead>
 															<tbody>
+																<?php 
+							$query = "SELECT * FROM `prescription` where `patient_id` = $id";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $prescription){
+                             	$did = $prescription['doctor_id'];
+
+                             $dquery = "SELECT * FROM `doctor` where `id` = $did";
+                             include '../config.php';
+                             $dstmt=$conn->prepare($dquery);
+                             $dstmt->execute();
+                             $dresult=$dstmt->fetch();
+                             $conn=null;
+                             ?>
 																<tr>
-																	<td>14 Nov 2019</td>
+																	<td><?php echo $prescription['appointmentdate'];?></td>
 																	<td>Prescription 1</td>
 																	<td>
 																		<h2 class="table-avatar">
 																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-01.jpg" alt="User Image">
+																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/<?php echo $dresult['image']?>" alt="User Image">
 																			</a>
-																			<a href="doctor-profile.php">Dr. Ruby Perrin <span>Dental</span></a>
+																			<a href="doctor-profile.php"><?php echo $dresult['name'];?> <span><?php echo $dresult['specialities'];?></span></a>
 																		</h2>
 																	</td>
 																	<td class="text-right">
@@ -379,204 +195,8 @@
 																		</div>
 																	</td>
 																</tr>
-																<tr>
-																	<td>13 Nov 2019</td>
-																	<td>Prescription 2</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Darren Elder <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>12 Nov 2019</td>
-																	<td>Prescription 3</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-03.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Deborah Angel <span>Cardiology</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>11 Nov 2019</td>
-																	<td>Prescription 4</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-04.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Sofia Brient <span>Urology</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>10 Nov 2019</td>
-																	<td>Prescription 5</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-05.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Marvin Campbell <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>9 Nov 2019</td>
-																	<td>Prescription 6</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-06.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Katharine Berthold <span>Orthopaedics</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>8 Nov 2019</td>
-																	<td>Prescription 7</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-07.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Linda Tobin <span>Neurology</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>7 Nov 2019</td>
-																	<td>Prescription 8</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-08.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Paul Richard <span>Dermatology</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>6 Nov 2019</td>
-																	<td>Prescription 9</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-09.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. John Gibbs <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<td>5 Nov 2019</td>
-																	<td>Prescription 10</td>
-																	<td>
-																		<h2 class="table-avatar">
-																			<a href="doctor-profile.php" class="avatar avatar-sm mr-2">
-																				<img class="avatar-img rounded-circle" src="../assets/img/doctors/doctor-thumb-10.jpg" alt="User Image">
-																			</a>
-																			<a href="doctor-profile.php">Dr. Olga Barlow <span>Dental</span></a>
-																		</h2>
-																	</td>
-																	<td class="text-right">
-																		<div class="table-action">
-																			<a href="javascript:void(0);" class="btn btn-sm bg-primary-light">
-																				<i class="fas fa-print"></i> Print
-																			</a>
-																			<a href="javascript:void(0);" class="btn btn-sm bg-info-light">
-																				<i class="far fa-eye"></i> View
-																			</a>
-																		</div>
-																	</td>
-																</tr>
+															<?php }?>
+																
 															</tbody>	
 														</table>
 													</div>
@@ -586,7 +206,7 @@
 										<!-- /Prescription Tab -->
 											
 										<!-- Medical Records Tab -->
-										<div id="pat_medical_records" class="tab-pane fade">
+										<!-- <div id="pat_medical_records" class="tab-pane fade">
 											<div class="card card-table mb-0">
 												<div class="card-body">
 													<div class="table-responsive">
@@ -847,7 +467,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- /Medical Records Tab -->
 										
 										<!-- Billing Tab -->

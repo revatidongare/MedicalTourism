@@ -38,7 +38,7 @@
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 						
 							<!-- Profile Sidebar -->
-							<?php include 'includes/sidebar.php'?>
+							<?php $status = 2; include 'includes/sidebar.php'?>
 							<!-- /Profile Sidebar -->
 							
 						</div>
@@ -46,19 +46,38 @@
 						<div class="col-md-7 col-lg-8 col-xl-9">
 							<div class="appointments">
 							
+							<?php 
+							$query = "SELECT * FROM `appointment` where `doctor_id` = $id";
+                             include '../config.php';
+                             $stmt=$conn->prepare($query);
+                             $stmt->execute();
+                             $result=$stmt->fetchAll();
+                             $conn=null;
+                                  
+                             foreach($result as $appointment){
+                             	$pid = $appointment['patient_id'];
+
+                             $dquery = "SELECT * FROM `patient_master` where `id` = $pid";
+                             include '../config.php';
+                             $dstmt=$conn->prepare($dquery);
+                             $dstmt->execute();
+                             $dresult=$dstmt->fetch();
+                             $conn=null;
+
+																?>
 								<!-- Appointment List -->
 								<div class="appointment-list">
 									<div class="profile-info-widget">
-										<a href="patient-profile.php" class="booking-doc-img">
-											<img src="../assets/img/patients/patient.jpg" alt="User Image">
+										<a href="patient-profile.php?pat=<?php echo $dresult['id'];?>" class="booking-doc-img">
+											<img src="../assets/img/patients/<?php echo $dresult['image'];?>" alt="User Image">
 										</a>
 										<div class="profile-det-info">
-											<h3><a href="patient-profile.php">Richard Wilson</a></h3>
+											<h3><a href="patient-profile.php"><?php echo $dresult['name'];?></a></h3>
 											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
-												<h5><i class="fas fa-envelope"></i> richard@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+												<h5><i class="far fa-clock"></i> <?php echo $appointment['appointmentdate'];?> , 10.00 AM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i><?php echo $dresult['city'];?>, <?php echo $dresult['state'];?></h5>
+												<h5><i class="fas fa-envelope"></i> <?php echo $dresult['email'];?></h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> <?php echo $dresult['contact'];?></h5>
 											</div>
 										</div>
 									</div>
@@ -74,10 +93,11 @@
 										</a>
 									</div>
 								</div>
+							<?php }?>
 								<!-- /Appointment List -->
 							
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient1.jpg" alt="User Image">
@@ -103,11 +123,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient2.jpg" alt="User Image">
@@ -135,11 +155,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient3.jpg" alt="User Image">
@@ -165,11 +185,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient4.jpg" alt="User Image">
@@ -195,11 +215,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient5.jpg" alt="User Image">
@@ -225,11 +245,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient6.jpg" alt="User Image">
@@ -255,11 +275,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient7.jpg" alt="User Image">
@@ -285,11 +305,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient8.jpg" alt="User Image">
@@ -315,11 +335,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient9.jpg" alt="User Image">
@@ -345,11 +365,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient10.jpg" alt="User Image">
@@ -375,11 +395,11 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<!-- <div class="appointment-list">
 									<div class="profile-info-widget">
 										<a href="patient-profile.php" class="booking-doc-img">
 											<img src="../assets/img/patients/patient11.jpg" alt="User Image">
@@ -405,7 +425,7 @@
 											<i class="fas fa-times"></i> Cancel
 										</a>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Appointment List -->
 								
 							</div>
